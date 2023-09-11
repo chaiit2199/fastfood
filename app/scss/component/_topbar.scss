@@ -1,0 +1,160 @@
+@use '../abstracts/' as *;
+
+/* Topbar
+-------------------------------------------------------------- */
+.topbar {
+    position: relative;
+    z-index: 11;
+    height: 115px;
+    @include flex(center, flex-start);
+
+    .topbar__logo {
+        width: 196px;
+        height: 59px;
+    }
+
+    .topbar-info {
+        width: calc(100% - 196px);
+        @include flex(center, flex-end);
+
+        .phone {
+            p {
+                &:nth-child(1) {
+                    font-family: "Cerebri-Italic";
+                    color: $color-3;
+                    font-size: 15px;
+                }
+
+                &:nth-child(2) {
+                    color: $color-2;
+                    font-family: $font-1;
+                    font-size: 30px;
+                    line-height: 35px;
+                    font-style: italic;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            background-color: $color-main;
+            border-radius: 50%;
+            @include flex(center, center);
+
+            i {
+                color: $white;
+            }
+        }
+
+        .action {
+            height: 50px;
+            padding: 0 8px;
+            @include flex(center, center);
+            border-radius: 25px;
+            margin-right: 30px;
+
+            li {
+                a {
+                    background-color: transparent;
+                    width: 41px;
+                    height: 41px;
+                    margin: 0 4px;
+                    border-radius: 50%;
+                    @include flex(center, center);
+
+                    svg {
+                        position: relative;
+                        width: 15px;
+                        height: 15px;
+
+                        path {
+                            @include transition3;
+                            fill: $white;
+                        }
+                    }
+
+                    &:hover,
+                    &.active {
+                        background-color: rgba(255, 255, 255, 0.1);
+
+                        svg {
+                            path {
+                                fill: $color-main;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        #language {
+            position: relative;
+            z-index: 9;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            svg {
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                right: -8px;
+            }
+
+            .icon {
+                position: absolute;
+                left: 0;
+            }
+
+            .btn-selector {
+                padding-left: 35px;
+                color: $color-3;
+            }
+
+            .dropdown-menu {
+                max-width: 100px;
+                border: none;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+                li {
+                    @include flex(center, flex-start);
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    img {
+                        margin-right: 8px;
+                    }
+
+                    span {
+                        color: $color-3;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        max-width: 100%;
+                        display: inline-block;
+                    }
+                }
+            }
+
+            img {
+                width: 27px;
+                height: 27px;
+            }
+        }
+    }
+}
+
+.BG {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 1920px;
+    height: 8788px;
+    z-index: 20;
+}

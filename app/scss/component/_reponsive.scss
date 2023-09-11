@@ -2,6 +2,10 @@
 
 /* Reponsive
 -------------------------------------------------------------- */
+.show-desktop {
+    display: block;
+}
+
 .icon_dashboard,
 .menu-mobile {
     display: none;
@@ -25,7 +29,15 @@
     }
 }
 
-@include res767 {}
+@include res767 {
+    .mobile-mb-0 {
+        margin-bottom: 0 !important;
+    }
+
+    .show-desktop {
+        display: none;
+    }
+}
 
 @include res600 {}
 

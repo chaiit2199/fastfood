@@ -14,3 +14,40 @@
     -webkit-transition-timing-function: linear;
     transition-timing-function: linear;
 }
+
+.swiper-container {
+    &.mySwiper1 {
+        overflow: visible;
+    }
+}
+
+.btn-slider {
+    .ic-slider {
+        @include transition3;
+        @include flex(center, center);
+        background-color: $black;
+        width: 66px;
+        height: 65px;
+        border-radius: 50%;
+
+        svg {
+            width: 40px;
+            height: 40px;
+
+            path {
+                @include transition3;
+                fill: $white;
+            }
+        }
+
+        opacity: 1;
+
+        &.swiper-button-disabled {
+            opacity: 0.5;
+        }
+
+        &:hover {
+            background-color: $color-4;
+        }
+    }
+}

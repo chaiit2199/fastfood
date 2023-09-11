@@ -1,5 +1,20 @@
 @use '../abstracts/' as *;
 
 /* Button
--------------------------------------------------------------- */ 
- 
+-------------------------------------------------------------- */
+.tf-button {
+    height: 50px;
+    color: $white;
+    text-transform: uppercase;
+    font-family: $font-1;
+    font-weight: 600;
+    background-color: $color-main;
+    padding: 6px 32px;
+    border-radius: 30px;
+    @include flex(center, center);
+
+    &:hover {
+        background-color: $color-3;
+        color: $white;
+    }
+}

@@ -1,6 +1,6 @@
 @use './abstracts/' as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html {
     margin-right: 0 !important;
@@ -14,6 +14,22 @@ html {
     font-display: block;
 }
 
+@font-face {
+    font-family: "Cerebri-Italic";
+    src: url("../../assets/font/CerebriSansPro-MediumItalic.ttf");
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Cerebri-SemiBold";
+    src: url("../../assets/font/Cerebri-Sans-SemiBold.ttf");
+    font-weight: 600;
+    font-style: normal;
+    font-display: block;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -21,11 +37,15 @@ html {
 }
 
 body {
-    font-family: $Cerebri;
+    font-family: $font-2;
     font-size: 15px;
     line-height: 25px;
     font-weight: 400;
-    color: $txt-color; 
+    color: $txt-color;
+}
+
+.reverse {
+    transform: rotate(180deg);
 }
 
 .overflow-x-auto {
@@ -90,21 +110,21 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $font-main-1;
+    font-family: $font-1;
     font-weight: 700;
     color: $white;
 }
 
 h1,
 .h1 {
-    font-size: 80px;
+    font-size: 60px;
     line-height: 1.2;
 }
 
 h2,
 .h2 {
-    font-size: 64px;
-    line-height: 1.25;
+    font-size: 50px;
+    line-height: 1.1;
 }
 
 h3,
@@ -115,14 +135,14 @@ h3,
 
 h4,
 .h4 {
-    font-size: 36px;
-    line-height: 1.2222;
+    font-size: 35px;
+    line-height: 1.2;
 }
 
 h5,
 .h5 {
-    font-size: 24px;
-    line-height: 1.5;
+    font-size: 25px;
+    line-height: 1.2;
 }
 
 h6,
@@ -178,10 +198,6 @@ p {
     margin-left: auto;
 }
 
-.flex-column {
-    flex-direction: column;
-}
-
 .width-full {
     width: 100%;
 }
@@ -190,15 +206,31 @@ p {
     text-transform: capitalize;
 }
 
-.container {
-    max-width: 1440px;
+.color-3 {
+    color: $color-3;
+}
 
-    &.w_1200 {
-        max-width: 1200px;
+.color-5 {
+    color: $color-5;
+}
+
+.color-6 {
+    color: $color-6;
+}
+
+.bg-6 {
+    background-color: $color-6;
+}
+
+.container {
+    max-width: 1200px;
+
+    &.w_1290 {
+        max-width: 1290px;
     }
 
-    &.w_1470 {
-        max-width: 1470px;
+    &.w_1650 {
+        max-width: 1650px;
     }
 
     &.w_1210 {
@@ -222,30 +254,33 @@ p {
     }
 }
 
-.brand-row1 {
-    .container {
-        max-width: 1622px;
-    }
-}
-
-.brand-row2 {
-    .container {
-        max-width: 1854px;
-    }
-} 
-
 .z-index {
     z-index: 999;
 }
 
 .white {
     color: $white;
-}     
+}
+
+.gradient {
+    background-image: -moz-linear-gradient(90deg, rgb(12, 12, 12) 0%, rgb(54, 53, 53) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(12, 12, 12) 0%, rgb(54, 53, 53) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(12, 12, 12) 0%, rgb(54, 53, 53) 100%);
+}
+
+.gradient-2 {
+    background-image: -moz-linear-gradient(90deg, rgb(202, 2, 3) 0%, rgb(255, 0, 1) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(202, 2, 3) 0%, rgb(255, 0, 1) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(202, 2, 3) 0%, rgb(255, 0, 1) 100%);
+}
 
 #wrapper {
     overflow: hidden !important;
     position: relative;
-} 
+    width: 100%;
+    height: 100%;
+}
+
 .row {
     margin-right: -15px;
     margin-left: -15px;
@@ -262,7 +297,7 @@ li {
 a {
     text-decoration: none;
     color: unset;
-    transition: all .3s;
+    @include transition3;
     cursor: pointer;
     display: inline-block;
 
@@ -274,7 +309,7 @@ a {
 
 .center {
     text-align: center;
-}  
+}
 
 .text-right {
     text-align: right;
@@ -299,42 +334,6 @@ a {
     padding-right: 15px;
 }
 
-.justify-end-destop {
-    justify-content: flex-end !important;
-}
-
-.flex {
-    @include flex(flex-start, flex-start);
-
-    &.justify-center {
-        justify-content: center;
-    }
-
-    &.justify-end {
-        justify-content: flex-end;
-    }
-
-    &.align-items-center {
-        align-items: center;
-    }
-
-    &.align-items-end {
-        align-items: flex-end;
-    }
-
-    .flex-column {
-        flex-direction: column;
-    }
-
-    &.flex-wrap {
-        flex-wrap: wrap;
-    }
-}
-
-.justify-between {
-    justify-content: space-between;
-} 
-
 .radius-10 {
     border-radius: 10px;
 }
@@ -342,11 +341,11 @@ a {
 .radius-4 {
     border-radius: 4px;
 }
- 
+
 .radius-20 {
     border-radius: 20px;
-} 
- 
+}
+
 .right {
     text-align: right;
 }
@@ -380,7 +379,7 @@ input[type="color"] {
     width: 100%;
     background: transparent;
     color: $txt-color;
-    font-family: $font-main-1;
+    font-family: $font-1;
 }
 
 button {
@@ -404,7 +403,7 @@ input[type="search"]::placeholder,
 input[type="tel"]::placeholder,
 input[type="color"]::placeholder {
     color: $txt-color;
-    font-family: $font-main-1;
+    font-family: $font-1;
 }
 
 
@@ -491,7 +490,7 @@ input[type="color"]::placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
-} 
+}
 
 @keyframes lod {
     0% {
@@ -512,9 +511,14 @@ input[type="color"]::placeholder {
 .tf-section {
     z-index: 2;
     position: relative;
-    padding: 100px 0;
+    padding: 130px 0;
     margin-bottom: 0 !important;
-}     
+
+    &.pb-100 {
+        padding-bottom: 100px;
+    }
+}
+
 /* @Keyframe */
 @keyframes rotating {
     0% {
@@ -524,4 +528,4 @@ input[type="color"]::placeholder {
     100% {
         transform: rotate(360deg);
     }
-}   
+}

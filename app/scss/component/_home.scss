@@ -1,2 +1,77 @@
+@use '../abstracts/' as *;
+
 /* Home style
 -------------------------------------------------------------- */
+.slider-page {
+    margin: 117px 0 50px;
+
+    .slide-inner {
+        position: relative;
+        @include flex(center, flex-start);
+
+        .content {
+            position: absolute;
+            z-index: 1;
+            padding: 16px 16px 16px 40px;
+
+            p {
+                font-family: $font-1;
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+.tf-title {
+    position: relative;
+
+    &.left {
+        &::after {
+            left: 0;
+        }
+    }
+
+    &.center {
+        &::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        height: 4px;
+        width: 108px;
+        background-color: $color-main;
+        border-radius: 4px;
+    }
+
+    .sub-title {
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        color: $color-2;
+        font-family: "Cerebri-SemiBold";
+    }
+
+    h2 {
+        letter-spacing: 0.3px;
+        color: $color-3;
+    }
+}
+
+.ic-botom {
+    position: relative;
+
+    &::before {
+        border-radius: 4px;
+        position: absolute;
+        content: "";
+        width: 60px;
+        height: 4px;
+        background-color: $color-main;
+        bottom: 0;
+        left: 0;
+    }
+}

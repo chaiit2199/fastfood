@@ -22,7 +22,7 @@
   // Mobile Navigation
   var mobileNav = function () {
     var mobile = window.matchMedia("(max-width: 991px)");
-    var wrapMenu = $("#site-header-inner");
+    var wrapMenu = $("#site-header");
     var navExtw = $(".nav-extend.active");
     var navExt = $(".nav-extend.active").children();
     var logo = $(".header__logo-mobile");
@@ -208,7 +208,7 @@
         var offsetTop = nav.offset().top,
           injectSpace = $("<div />", {}).insertAfter(nav);
         $(window).on("load scroll", function () {
-          if ($(window).scrollTop() > 200) {
+          if ($(window).scrollTop() > 212) {
             nav.addClass("is-fixed");
             injectSpace.show();
           } else {
@@ -216,7 +216,7 @@
             injectSpace.hide();
           }
 
-          if ($(window).scrollTop() > 300) {
+          if ($(window).scrollTop() > 222) {
             nav.addClass("is-small");
           } else {
             nav.removeClass("is-small");
@@ -502,6 +502,26 @@
     }, 800);
   };
 
+  var language = function(){
+      var obj = document.getElementById('language');
+      var btn = obj.querySelector('.btn-selector');
+      var dd = obj.querySelector('ul');
+      var opt = dd.querySelectorAll('li'); 
+      let icon = obj.querySelector('.icon')
+      opt.forEach(function(option) {
+          option.addEventListener("click", function() {
+              var txt = option.querySelector('span').innerText;
+              var img = this.querySelector('img')
+              opt.forEach(function(o) {
+                  o.classList.remove("active");
+              });
+              option.classList.toggle("active");
+              btn.innerText = txt;
+              icon.src = img.src
+          });
+      });
+  };
+
   let close_popup = document.querySelector(".close-popup");
   if (close_popup) {
     close_popup.addEventListener("click", function () {
@@ -537,8 +557,10 @@
     }
   }
 
+
   // Dom Ready
   $(function () {
+    language();
     mobileNav();
     headerFixed();
     ajaxSubscribe.eventLoad();

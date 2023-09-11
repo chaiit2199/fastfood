@@ -16,14 +16,14 @@
 .header .show-header-fixed {
   display: none;
 }
-.header #site-header-inner {
+.header #site-header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   position: relative;
   width: 100%;
 }
-.header #site-header-inner .tf-button {
+.header #site-header .tf-button {
   margin-left: auto;
   padding: 8px 16px;
   color: #171717;
@@ -31,7 +31,7 @@
   line-height: 26px;
   font-weight: 700;
 }
-.header #site-header-inner .tf-button:hover {
+.header #site-header .tf-button:hover {
   background-color: #fff;
 }
 .header .main-nav {
@@ -1660,7 +1660,7 @@
 .home9 .header {
   height: 88px;
 }
-.home9 .header #site-header-inner .tf-button {
+.home9 .header #site-header .tf-button {
   padding: 0 32px;
   height: 50px;
   display: flex;
@@ -1668,7 +1668,7 @@
   justify-content: center;
   color: #fff;
 }
-.home9 .header #site-header-inner .tf-button:hover {
+.home9 .header #site-header .tf-button:hover {
   color: #171717;
 }
 .home9 .container {
@@ -1985,7 +1985,7 @@
   height: 92px;
   background-color: transparent;
 }
-.home11 .header #site-header-inner .tf-button {
+.home11 .header #site-header .tf-button {
   padding: 12px 32px;
 }
 .home11.body {
@@ -9609,7 +9609,7 @@ img.mfp-img {
   .page-title.style4 .content-box .image-box img {
     width: 100%;
   }
-  .header #site-header-inner .tf-button {
+  .header #site-header .tf-button {
     display: none;
   }
   .page-title.style3 .content-box .image-box {
