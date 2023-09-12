@@ -30,3 +30,28 @@ var swiper =  new Swiper(".sl-product-1", {
         },
     },
 });  
+
+var swiper =  new Swiper(".sl-product-2", {
+    slidesPerView: 1,
+    loop: true,  
+    spaceBetween: 0, 
+    speed: 1000,  
+    direction: 'horizontal', 
+    autoplay: {
+    delay: 2000, 
+    },  
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        }, 
+        400: {
+            slidesPerView: 1,
+        }, 
+        750: {
+            slidesPerView: 2,
+        }, 
+        1280: {
+            slidesPerView: 4,
+        },
+    },
+});  

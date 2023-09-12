@@ -324,3 +324,72 @@
         }
     }
 }
+
+.about-box {
+    margin-top: 60px;
+    overflow: hidden;
+    display: flex;
+    border-radius: 35px;
+    background-color: rgb(255, 244, 234);
+    padding: 30px;
+    position: relative;
+
+    .icon-bg {
+        position: absolute;
+        right: -50px;
+        top: -50px;
+        z-index: 1;
+    }
+
+    .icon-bg2 {
+        right: 60px;
+        bottom: 50px;
+        position: absolute;
+        z-index: 1;
+        width: 129px;
+        height: 129px;
+    }
+
+    .image {
+        z-index: 2;
+        width: 45%;
+
+        img {
+            border-radius: 20px;
+            max-width: 597px;
+        }
+    }
+
+    .content {
+        padding-right: 245px;
+        z-index: 2;
+        padding-left: 60px;
+        width: 55%;
+
+        .wrap-button {
+            display: flex;
+        }
+
+        ul {
+            @include flex(inherit, space-between);
+            flex-wrap: wrap;
+
+            li {
+                margin-bottom: 20px;
+                @include flex(flex-start, flex-start);
+                width: calc(50% - 48px);
+
+                svg {
+                    margin: 5px 5px 0 0;
+                    width: 15px;
+                    height: 15px;
+                }
+
+                span {
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                }
+            }
+        }
+    }
+}

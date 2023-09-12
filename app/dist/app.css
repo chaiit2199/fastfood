@@ -249,6 +249,13 @@
   align-items: center;
   justify-content: center;
 }
+.tf-button.style2 {
+  background-color: #bb0001;
+}
+.tf-button.style2:hover {
+  background-color: #0c0c0c;
+  color: #fff;
+}
 .tf-button:hover {
   background-color: #0c0c0c;
   color: #fff;
@@ -545,6 +552,69 @@
 .product-item.active .overlay, .product-item:hover .overlay {
   opacity: 1;
   visibility: visible;
+}
+
+.about-box {
+  margin-top: 60px;
+  overflow: hidden;
+  display: flex;
+  border-radius: 35px;
+  background-color: rgb(255, 244, 234);
+  padding: 30px;
+  position: relative;
+}
+.about-box .icon-bg {
+  position: absolute;
+  right: -50px;
+  top: -50px;
+  z-index: 1;
+}
+.about-box .icon-bg2 {
+  right: 60px;
+  bottom: 50px;
+  position: absolute;
+  z-index: 1;
+  width: 129px;
+  height: 129px;
+}
+.about-box .image {
+  z-index: 2;
+  width: 45%;
+}
+.about-box .image img {
+  border-radius: 20px;
+  max-width: 597px;
+}
+.about-box .content {
+  padding-right: 245px;
+  z-index: 2;
+  padding-left: 60px;
+  width: 55%;
+}
+.about-box .content .wrap-button {
+  display: flex;
+}
+.about-box .content ul {
+  display: flex;
+  align-items: inherit;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.about-box .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: calc(50% - 48px);
+}
+.about-box .content ul li svg {
+  margin: 5px 5px 0 0;
+  width: 15px;
+  height: 15px;
+}
+.about-box .content ul li span {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Swiper
@@ -5691,6 +5761,20 @@ html {
   src: url("../../assets/font/Cerebri-Sans-SemiBold.ttf");
   font-weight: 600;
   font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Cerebri-Medium";
+  src: url("../../assets/font/CerebriSans-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Cerebri-MediumItalic";
+  src: url("../../assets/font/CerebriSans-MediumItalic.ttf");
+  font-weight: 500;
+  font-style: italic;
   font-display: block;
 }
 * {

@@ -30,6 +30,22 @@ html {
     font-display: block;
 }
 
+@font-face {
+    font-family: "Cerebri-Medium";
+    src: url("../../assets/font/CerebriSans-Medium.ttf");
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    font-family: "Cerebri-MediumItalic";
+    src: url("../../assets/font/CerebriSans-MediumItalic.ttf");
+    font-weight: 500;
+    font-style: italic;
+    font-display: block;
+}
+
 * {
     margin: 0;
     padding: 0;
