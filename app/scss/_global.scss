@@ -15,6 +15,14 @@ html {
 }
 
 @font-face {
+    font-family: "Cerebri-Regular";
+    src: url("../../assets/font/Cerebri-Sans-Book.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
     font-family: "Cerebri-Italic";
     src: url("../../assets/font/CerebriSansPro-MediumItalic.ttf");
     font-weight: 500;
@@ -99,13 +107,13 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: $color-hover;
+    background: $color-main;
     border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: $color-hover;
+    background: $color-main;
 }
 
 .inner-page {
@@ -127,7 +135,7 @@ h4,
 h5,
 h6 {
     font-family: $font-1;
-    font-weight: 700;
+    font-weight: 600;
     color: $white;
 }
 
@@ -218,12 +226,24 @@ p {
     width: 100%;
 }
 
-.capitalize {
-    text-transform: capitalize;
+.bg-2 {
+    background-color: $color-2;
 }
 
 .color-3 {
     color: $color-3;
+}
+
+.color-main {
+    color: $color-main;
+}
+
+.font_600 {
+    font-weight: 600;
+}
+
+.font_bold {
+    font-weight: bold;
 }
 
 .color-5 {
@@ -290,6 +310,30 @@ p {
     background-image: -ms-linear-gradient(90deg, rgb(202, 2, 3) 0%, rgb(255, 0, 1) 100%);
 }
 
+.gradient-3 {
+    background-image: -moz-linear-gradient(90deg, rgb(20, 59, 167) 0%, rgb(56, 96, 209) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(20, 59, 167) 0%, rgb(56, 96, 209) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(20, 59, 167) 0%, rgb(56, 96, 209) 100%);
+}
+
+.gradient-4 {
+    background-image: -moz-linear-gradient(90deg, rgb(225, 118, 3) 0%, rgb(246, 179, 57) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(225, 118, 3) 0%, rgb(246, 179, 57) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(225, 118, 3) 0%, rgb(246, 179, 57) 100%);
+}
+
+.gradient-5 {
+    background-image: -moz-linear-gradient(90deg, rgb(169, 0, 1) 0%, rgb(237, 43, 44) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgb(169, 0, 1) 0%, rgb(237, 43, 44) 100%);
+    background-image: -ms-linear-gradient(90deg, rgb(169, 0, 1) 0%, rgb(237, 43, 44) 100%);
+}
+
+.gradient-6 {
+    background-image: -moz-linear-gradient(90deg, rgb(175, 4, 5) 0%, rgb(234, 41, 42) 99%);
+    background-image: -webkit-linear-gradient(90deg, rgb(175, 4, 5) 0%, rgb(234, 41, 42) 99%);
+    background-image: -ms-linear-gradient(90deg, rgb(175, 4, 5) 0%, rgb(234, 41, 42) 99%);
+}
+
 #wrapper {
     overflow: hidden !important;
     position: relative;
@@ -318,7 +362,7 @@ a {
     display: inline-block;
 
     &:hover {
-        color: $color-hover;
+        color: $color-main;
         transition: all .3s;
     }
 }
@@ -391,11 +435,11 @@ input[type="color"] {
     font-size: 24px;
     line-height: 40px;
     border-radius: 0;
-    padding: 0 0 18px 0;
+    padding: 5px 24px;
     width: 100%;
     background: transparent;
-    color: $txt-color;
-    font-family: $font-1;
+    color: $color-3;
+    font-family: $font-3;
 }
 
 button {
@@ -527,8 +571,24 @@ input[type="color"]::placeholder {
 .tf-section {
     z-index: 2;
     position: relative;
-    padding: 130px 0;
+    padding: 122px 0;
     margin-bottom: 0 !important;
+
+    &.pb-130 {
+        padding-bottom: 130px;
+    }
+
+    &.pt-130 {
+        padding-top: 130px;
+    }
+
+    &.pb-104 {
+        padding-bottom: 104px;
+    }
+
+    &.pb-45 {
+        padding-bottom: 45px;
+    }
 
     &.pb-100 {
         padding-bottom: 100px;

@@ -1,0 +1,161 @@
+@use '../abstracts/' as *;
+
+/* Footer
+-------------------------------------------------------------- */
+.footer {
+    padding-top: 80px;
+    position: relative;
+    background: url('./../../assets/images/backgroup/bg-footer.png') center center no-repeat;
+    background-size: cover;
+
+    .footer-logo {
+        img {
+            width: 198px;
+        }
+    }
+
+    .border-right {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .line {
+        background-color: rgb(255, 255, 255);
+        opacity: 0.149;
+        position: relative;
+        width: calc((100% - 198px) / 2);
+        height: 1px;
+    }
+
+    .footer-link {
+        margin-bottom: 70px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 30px;
+
+        li {
+            margin: 0 25px;
+
+            a {
+                font-size: 17px;
+                font-family: $font-1;
+                font-weight: 500;
+                color: $white;
+
+                &:hover {
+                    color: $color-main;
+                }
+            }
+        }
+    }
+
+    .list {
+        li {
+            margin-bottom: 5px;
+
+            &.mb-10 {
+                margin-bottom: 10px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            span {
+                color: #c5c5c5;
+
+                span {
+                    color: $white;
+
+                    &.color-main {
+                        color: $color-main;
+                    }
+                }
+            }
+        }
+    }
+
+    .call {
+        font-size: 30px;
+        letter-spacing: 0.2px;
+        font-family: $font-1;
+        font-weight: 600;
+        color: $color-2;
+    }
+
+    .tf-button {
+        &:hover {
+            background-color: $white;
+            color: $color-3;
+        }
+    }
+
+    .footer-social {
+        margin-top: 50px;
+        position: relative;
+
+        .social {
+            z-index: 2;
+            background-color: $color-2;
+            border-radius: 25px;
+            padding: 5px 40px;
+            height: 50px;
+
+            li {
+                margin: 0 12px;
+                width: 16px;
+                height: 16px;
+
+                a {
+                    @include flex(center, center);
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+
+                    svg {
+                        width: 16px;
+
+                        path {
+                            fill: $white;
+                        }
+                    }
+
+                    i {
+                        font-size: 16px;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 1px;
+            width: 100%;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+
+    .footer-bottom {
+        padding-bottom: 27px;
+
+        .copyright {
+            width: 50%;
+            color: #c5c5c5;
+        }
+
+        .payment-methods {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+
+            .image {
+                max-width: 310px;
+            }
+        }
+    }
+}

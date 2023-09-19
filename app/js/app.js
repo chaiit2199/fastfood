@@ -65,6 +65,8 @@
       $(this).toggleClass("active");
       $("#main-nav-mobi").slideToggle();
       $("body").toggleClass("main-nav-mobile");
+      $("#header_main").toggleClass("toggle");
+
     });
     $(document).on("click", "#main-nav-mobi .arrow", function () {
       $(this).toggleClass("active").next().slideToggle();
@@ -124,7 +126,7 @@
       });
 
       // Run on Window Load
-      self.config.$window.on("load", function () {});
+      self.config.$window.on("load", function () { });
     },
 
     // Retina Logos
@@ -394,41 +396,6 @@
         });
     });
   };
-  // flatProgressBar
-  var flatProgressBar = function () {
-    if ($(".couter .chart").length > 0) {
-      var $pieChart = $(".couter .chart");
-      $pieChart.each(function () {
-        var $elem = $(this),
-          pieChartSize = $elem.attr("data-size") || "84",
-          pieChartAnimate = $elem.attr("data-animate") || "2100",
-          pieChartWidth = $elem.attr("data-width") || "8",
-          pieChartColor = $elem.attr("data-color") || "#C8F27C",
-          pieChartTrackColor =
-            $elem.attr("data-trackcolor") || "rgba(13, 73, 0, 1)";
-        $elem.find("span, i").css({
-          width: pieChartSize + "px",
-          height: pieChartSize + "px",
-          "line-height": pieChartSize + "px",
-        });
-        $elem.appear(function () {
-          $elem.easyPieChart({
-            size: Number(pieChartSize),
-            animate: Number(pieChartAnimate),
-            trackColor: pieChartTrackColor,
-            lineWidth: Number(pieChartWidth),
-            barColor: pieChartColor,
-            scaleColor: false,
-            lineCap: "round",
-            onStep: function (from, to, percent) {
-              $elem.find("span.percent").text(Math.round(percent));
-            },
-            rotate: 40,
-          });
-        });
-      });
-    }
-  };
 
   // goTop
   var goTop = function () {
@@ -502,24 +469,24 @@
     }, 800);
   };
 
-  var language = function(){
-      var obj = document.getElementById('language');
-      var btn = obj.querySelector('.btn-selector');
-      var dd = obj.querySelector('ul');
-      var opt = dd.querySelectorAll('li'); 
-      let icon = obj.querySelector('.icon')
-      opt.forEach(function(option) {
-          option.addEventListener("click", function() {
-              var txt = option.querySelector('span').innerText;
-              var img = this.querySelector('img')
-              opt.forEach(function(o) {
-                  o.classList.remove("active");
-              });
-              option.classList.toggle("active");
-              btn.innerText = txt;
-              icon.src = img.src
-          });
+  var language = function () {
+    var obj = document.getElementById('language');
+    var btn = obj.querySelector('.btn-selector');
+    var dd = obj.querySelector('ul');
+    var opt = dd.querySelectorAll('li');
+    let icon = obj.querySelector('.icon')
+    opt.forEach(function (option) {
+      option.addEventListener("click", function () {
+        var txt = option.querySelector('span').innerText;
+        var img = this.querySelector('img')
+        opt.forEach(function (o) {
+          o.classList.remove("active");
+        });
+        option.classList.toggle("active");
+        btn.innerText = txt;
+        icon.src = img.src
       });
+    });
   };
 
   let close_popup = document.querySelector(".close-popup");
@@ -571,7 +538,6 @@
     flatAccordion();
     popupVideo();
     flatCounter();
-    flatProgressBar();
     $(window).on("load resize", function () {
       parallax();
     });

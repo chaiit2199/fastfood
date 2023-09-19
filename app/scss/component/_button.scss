@@ -3,15 +3,17 @@
 /* Button
 -------------------------------------------------------------- */
 .tf-button {
+    font-size: 15px;
     height: 50px;
     color: $white;
     text-transform: uppercase;
     font-family: $font-1;
     font-weight: 600;
     background-color: $color-main;
-    padding: 6px 32px;
+    padding: 6px 34px;
     border-radius: 30px;
     @include flex(center, center);
+    letter-spacing: 0.8px;
 
     &.style2 {
         background-color: $color-4;

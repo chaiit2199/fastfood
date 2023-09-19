@@ -16,8 +16,59 @@
 }
 
 .swiper-container {
-    &.mySwiper1 {
+    &.mySwiper1.visible {
         overflow: visible;
+    }
+}
+
+.swiper-btn {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    width: 78px;
+    height: 78px;
+    @include flex(center, center);
+    z-index: 5;
+
+    svg {
+        width: 40px;
+        height: 40px;
+
+        path {
+            @include transition3;
+        }
+    }
+
+    &.swiper-button-disabled,
+    &:hover {
+        background-color: $color-main;
+        box-shadow: 0px 0px 18.27px 2.73px rgba(0, 0, 0, 0.2);
+
+        svg {
+            path {
+                fill: $white;
+            }
+        }
+    }
+
+    &.reverse {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+
+    &.btn-next-product,
+    &.btn-prev-product {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &.btn-prev-product {
+        left: 40px;
+    }
+
+    &.btn-next-product {
+        right: 40px;
     }
 }
 
@@ -50,4 +101,19 @@
             background-color: $color-4;
         }
     }
+}
+
+.mySwiper2 {
+    .swiper-slide {
+        border-right: 1px dashed rgba(239, 239, 239, 0.2);
+
+        &:last-child {
+            border: none;
+        }
+    }
+}
+
+.swiper-prev-testimonial,
+.swiper-next-testimonial {
+    z-index: 9;
 }

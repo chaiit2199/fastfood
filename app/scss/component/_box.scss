@@ -2,23 +2,8 @@
 
 /* Box
 -------------------------------------------------------------- */
-.hover-effect {
-    overflow: hidden;
-
-    &:hover {
-        img {
-            transform: scale(1.15);
-        }
-    }
-
-    img {
-        transition: 0.8s ease;
-    }
-}
-
 .about-inner {
-    padding: 80px 215px;
-    border-radius: 30px;
+    padding: 64px 215px 60px;
     @include flex(inherit, space-between);
     position: relative;
     overflow: hidden;
@@ -27,33 +12,27 @@
         position: absolute;
 
         &.icon_1 {
-            left: -30px;
-            bottom: -35px;
+            left: -35px;
+            bottom: -40px;
         }
 
         &.icon_2 {
-            right: -30px;
+            right: -35px;
             bottom: -20px;
         }
     }
 
     .box {
         text-align: center;
-        width: 25%;
         height: 100%;
         position: relative;
         overflow: hidden;
 
-        border-right: 1px dashed rgba(239, 239, 239, 0.2);
-
-        &:last-child {
-            border: none;
-        }
-
         h5 {
-            line-height: 2;
             position: relative;
-            padding-bottom: 12px;
+            padding-bottom: 22px;
+            letter-spacing: 0.6px;
+            font-weight: 600;
 
             &::before {
                 position: absolute;
@@ -93,13 +72,17 @@
 
         }
 
-        .hover-effect,
+        .hover-effect {
+            padding: 12px 35px 16px;
+        }
+
         .inner {
             @include transition5;
-            padding: 16px;
+            padding: 14px 16px 16px;
         }
 
         .hover-effect {
+            @include transition3;
             position: absolute;
             top: -100%;
             opacity: 0;
@@ -110,9 +93,11 @@
         &:hover {
             .inner {
                 top: 100%;
+                @include transition3;
             }
 
             .hover-effect {
+                @include transition5;
                 top: 0;
                 opacity: 1;
                 visibility: visible;
@@ -134,10 +119,12 @@
     .content {
         top: 0;
         left: 0;
-        padding: 40px;
+        padding: 42px 60px 42px 40px;
         position: absolute;
 
         .title {
+            letter-spacing: 0.8px;
+
             a:hover {
                 color: $color-4;
             }
@@ -151,7 +138,7 @@
         width: 75px;
         height: 75px;
         right: 60px;
-        bottom: 25px;
+        bottom: 28px;
         @include flex(center, center);
 
         svg path {
@@ -177,7 +164,7 @@
 
     &:hover {
         .link {
-            right: 40px;
+            right: 42px;
             opacity: 1;
             visibility: visible;
         }
@@ -191,13 +178,19 @@
         overflow: hidden;
         position: relative;
         display: flex;
-        border-radius: 16px;
-        padding: 40px 10px 40px 50px;
+        border-radius: 20px;
+        padding: 44px 16px 20px 50px;
+        background-color: $white;
     }
 
-    .content,
+    .content {
+        width: 48%;
+    }
+
     .image {
-        width: 100%;
+        width: 52%;
+        padding-top: 10px;
+        min-height: 335px;
     }
 
     .image {
@@ -241,7 +234,7 @@
         z-index: 9;
         position: absolute;
         right: 45px;
-        padding: 11.5px 44px;
+        padding: 11.5px 36px;
         top: 0;
         border-radius: 25px;
         color: $white;
@@ -253,7 +246,7 @@
 
         .desc {
             @include transition3;
-            margin-bottom: 24px;
+            margin-bottom: 17px;
         }
 
         ul {
@@ -263,11 +256,12 @@
                 font-family: "Cerebri-SemiBold";
                 font-weight: 500;
                 position: relative;
-                padding-left: 16px;
+                padding-left: 20px;
                 font-size: 17px;
                 color: $color-3;
                 @include transition3;
-                margin-bottom: 15px;
+                margin-bottom: 5px;
+                letter-spacing: 0.2px;
 
                 &:last-child {
                     margin-bottom: 0;
@@ -326,12 +320,12 @@
 }
 
 .about-box {
-    margin-top: 60px;
+    margin: 75px 0 52px;
     overflow: hidden;
     display: flex;
     border-radius: 35px;
     background-color: rgb(255, 244, 234);
-    padding: 30px;
+    padding: 30px 30px 35px;
     position: relative;
 
     .icon-bg {
@@ -352,44 +346,293 @@
 
     .image {
         z-index: 2;
-        width: 45%;
+        width: 40%;
 
         img {
             border-radius: 20px;
             max-width: 597px;
+            width: 100%;
         }
     }
 
     .content {
-        padding-right: 245px;
         z-index: 2;
-        padding-left: 60px;
-        width: 55%;
+        padding: 64px 240px 0 40px;
+        width: 60%;
 
         .wrap-button {
             display: flex;
         }
 
         ul {
-            @include flex(inherit, space-between);
+            @include flex(inherit, flex-start);
             flex-wrap: wrap;
 
             li {
-                margin-bottom: 20px;
+                margin-bottom: 13px;
                 @include flex(flex-start, flex-start);
-                width: calc(50% - 48px);
+                padding-right: 10px;
+                width: 44%;
 
                 svg {
-                    margin: 5px 5px 0 0;
+                    margin: 5px 10px 0 3px;
                     width: 15px;
                     height: 15px;
                 }
 
                 span {
                     text-transform: uppercase;
-                    letter-spacing: 0.5px;
+                    letter-spacing: 0.8px;
                 }
             }
+        }
+    }
+}
+
+.icon-box {
+    padding: 32px 36px 44px 34px;
+
+    h4 {
+        margin-bottom: 16px;
+        letter-spacing: 1px;
+        line-height: 40px;
+    }
+
+    p {
+        font-family: "Cerebri-Regular";
+        font-size: 17px;
+        line-height: 28px;
+        color: $white;
+        margin-bottom: 32px;
+        padding-right: 36px;
+    }
+
+    .action {
+        font-weight: 600;
+        color: $white;
+        text-transform: uppercase;
+        font-family: $font-1;
+        display: flex;
+        align-items: center;
+        letter-spacing: 1.2px;
+
+        svg {
+            width: 25px;
+            height: 25px;
+
+            path {
+                fill: $white;
+                @include transition3;
+            }
+        }
+
+        &:hover {
+            color: $color-main;
+
+            svg {
+
+                path {
+                    fill: $color-main;
+                }
+            }
+        }
+    }
+
+    .top {
+        display: flex;
+
+        .left {
+            padding-top: 16px;
+            width: 65%;
+        }
+
+        .icon {
+            width: 35%;
+            padding-left: 15px;
+            text-align: right;
+        }
+    }
+}
+
+.post {
+    position: relative;
+
+    .image {
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        justify-content: center;
+        height: 353px;
+        transition: height 0.3s;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .tag {
+            background-color: $color-2;
+            border-radius: 30px;
+            padding: 9px 5% 9px 12.6%;
+
+            li {
+                &:nth-child(1) {
+                    margin-right: 20px;
+                }
+
+                display: block;
+                font-size: 13px;
+                font-family: "Cerebri-Regular";
+                color: $white;
+
+                span {
+                    padding-left: 4px;
+                }
+            }
+
+            position: absolute;
+            bottom: 10px;
+            width: calc(100% - 24px);
+        }
+    }
+
+    .title {
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: 0.3px;
+        font-family: $font-1;
+        padding: 0 15px;
+    }
+
+    .desc {
+        padding: 17px 16px 0;
+        margin-bottom: 16px;
+        opacity: 0;
+        visibility: hidden;
+        width: 100%;
+        height: 0;
+        @include transition3;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+    }
+
+    &.active,
+    &:hover {
+        .image {
+            height: 261px;
+        }
+
+        .desc {
+            visibility: visible;
+            opacity: 1;
+            width: 100%;
+            height: 100px;
+            left: 0;
+            position: relative;
+            @include transition1;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+.product-3 {
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+
+    >img {
+        width: 100%;
+    }
+
+    .action {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        @include flex(center, center);
+        left: 0;
+        top: -100%;
+        background: url('./../../assets/images/backgroup/bg-box-2.jpg') center center no-repeat;
+        background-size: cover;
+        opacity: 0;
+        visibility: hidden;
+        border-radius: 20px;
+        @include transition3;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .icon {
+            border-radius: 50%;
+            background-color: $color-2;
+            width: 71px;
+            height: 71px;
+            border-radius: 50%;
+            @include flex(center, center);
+
+            svg {
+                width: 22px;
+                height: 22px;
+
+                path {
+                    @include transition3;
+                    fill: $white;
+                }
+            }
+        }
+    }
+
+    .icon:hover {
+        background-color: $color-3;
+    }
+
+    &:hover {
+        .action {
+            opacity: 1;
+            visibility: visible;
+            top: 0;
+        }
+
+
+    }
+}
+
+.item-box-2 {
+    padding: 20px 0 30px;
+
+    .image {
+        @include flex(flex-end, center);
+        height: 80px;
+    }
+}
+
+.video {
+    position: relative;
+    @include flex(center, center);
+
+    .img_video {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .wrap-video {
+        z-index: 9;
+        position: absolute;
+
+        a {
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            background-color: $white;
+            @include flex(center, center);
         }
     }
 }

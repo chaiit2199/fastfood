@@ -34,8 +34,24 @@
     justify-content: space-between;
 }
 
+.pd0 {
+    padding: 0 !important;
+}
+
+.radius-20 {
+    border-radius: 20px;
+}
+
+.radius-30 {
+    border-radius: 30px;
+}
+
 .w-full {
     width: $w100;
+}
+
+.h-full {
+    height: $w100;
 }
 
 .uppercase {
@@ -48,4 +64,49 @@
 
 .fz-17 {
     font-size: 17px;
+    line-height: 1.7;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.mt3 {
+    margin-top: 3px;
+}
+
+.pb5 {
+    padding-bottom: 5px;
+}
+
+.text-spacing-0_5 {
+    letter-spacing: 0.5px;
+}
+
+.text-spacing-1 {
+    letter-spacing: 1px;
+}
+
+.r-0 {
+    right: 0;
+}
+
+.l-0 {
+    left: 0;
+}
+
+.t-0 {
+    top: 0;
+}
+
+.b-0 {
+    bottom: 0;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
 }
