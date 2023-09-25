@@ -3,9 +3,71 @@
 /* Footer
 -------------------------------------------------------------- */
 .flat-tabs {
-    .menu-tab { 
+    .menu-tab {
+        &.menu-item-box {
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(200, 200, 200, 0.7);
+            margin-bottom: 80px;
+
+            li {
+                width: calc((100% - 150px) / 6);
+                position: relative;
+
+                &.active {
+                    &::before {
+                        width: 70%;
+                    }
+                }
+
+                &::before {
+                    @include transition3;
+                    position: absolute;
+                    content: "";
+                    background-color: rgb(220, 3, 4);
+                    height: 4px;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 0;
+                    border-radius: 2px;
+
+                }
+            }
+        }
     }
 
-    .content-tab { 
+    .content-tab {
+        .content-inner {
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: space-between;
+
+            >div {
+                margin-bottom: 30px;
+                width: calc((100% - 30px) / 2);
+            }
+        }
+
+
     }
-}     
+}
+
+.content-inner {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    transform: scale(0.9) translate(0, 0%);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+
+    &.active {
+        @include transition5;
+        z-index: 1;
+        opacity: 1;
+        visibility: visible;
+        position: relative;
+        transform: scale(1) translate(0, 0%);
+    }
+}

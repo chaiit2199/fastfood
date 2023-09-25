@@ -13,7 +13,7 @@
 
 #main-nav-mobi {
     @include translateY0;
-    display: flex;
+    display: none;
     flex-direction: column-reverse;
     justify-content: flex-end;
     margin: 0 auto;
@@ -193,6 +193,15 @@
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     transform: translateY(-50%);
+
+    &.style2 {
+
+        &:before,
+        &:after,
+        span {
+            background-color: $white;
+        }
+    }
 
     &:before,
     &:after,

@@ -202,6 +202,10 @@ h6,
     }
 }
 
+.fz-40 {
+    font-size: 40px;
+}
+
 p {
     margin-bottom: 0;
 }
@@ -214,8 +218,16 @@ p {
     border-radius: 16px;
 }
 
+.font2 {
+    font-family: $font-2;
+}
+
 .radius-24 {
     border-radius: 24px;
+}
+
+.radius-35 {
+    border-radius: 35px;
 }
 
 .left-auto {
@@ -230,8 +242,16 @@ p {
     background-color: $color-2;
 }
 
+.h50 {
+    height: 50px;
+}
+
 .color-3 {
     color: $color-3;
+}
+
+.color-7 {
+    color: $color-7;
 }
 
 .color-main {
@@ -244,6 +264,10 @@ p {
 
 .font_bold {
     font-weight: bold;
+}
+
+.color-2 {
+    color: $color-2;
 }
 
 .color-5 {
@@ -260,6 +284,14 @@ p {
 
 .container {
     max-width: 1200px;
+
+    &.w_1890 {
+        max-width: 1890px;
+    }
+
+    &.w_1374 {
+        max-width: 1374px;
+    }
 
     &.w_1290 {
         max-width: 1290px;
@@ -299,39 +331,27 @@ p {
 }
 
 .gradient {
-    background-image: -moz-linear-gradient(90deg, rgb(12, 12, 12) 0%, rgb(54, 53, 53) 100%);
-    background-image: -webkit-linear-gradient(90deg, rgb(12, 12, 12) 0%, rgb(54, 53, 53) 100%);
-    background-image: -ms-linear-gradient(90deg, rgb(12, 12, 12) 0%, rgb(54, 53, 53) 100%);
+    background-image: linear-gradient(90deg, rgb(12, 12, 12) 0%, rgb(54, 53, 53) 100%);
 }
 
 .gradient-2 {
-    background-image: -moz-linear-gradient(90deg, rgb(202, 2, 3) 0%, rgb(255, 0, 1) 100%);
-    background-image: -webkit-linear-gradient(90deg, rgb(202, 2, 3) 0%, rgb(255, 0, 1) 100%);
-    background-image: -ms-linear-gradient(90deg, rgb(202, 2, 3) 0%, rgb(255, 0, 1) 100%);
+    background-image: linear-gradient(90deg, rgb(202, 2, 3) 0%, rgb(255, 0, 1) 100%);
 }
 
 .gradient-3 {
-    background-image: -moz-linear-gradient(90deg, rgb(20, 59, 167) 0%, rgb(56, 96, 209) 100%);
-    background-image: -webkit-linear-gradient(90deg, rgb(20, 59, 167) 0%, rgb(56, 96, 209) 100%);
-    background-image: -ms-linear-gradient(90deg, rgb(20, 59, 167) 0%, rgb(56, 96, 209) 100%);
+    background-image: linear-gradient(90deg, rgb(20, 59, 167) 0%, rgb(56, 96, 209) 100%);
 }
 
 .gradient-4 {
-    background-image: -moz-linear-gradient(90deg, rgb(225, 118, 3) 0%, rgb(246, 179, 57) 100%);
-    background-image: -webkit-linear-gradient(90deg, rgb(225, 118, 3) 0%, rgb(246, 179, 57) 100%);
-    background-image: -ms-linear-gradient(90deg, rgb(225, 118, 3) 0%, rgb(246, 179, 57) 100%);
+    background-image: linear-gradient(90deg, rgb(225, 118, 3) 0%, rgb(246, 179, 57) 100%);
 }
 
 .gradient-5 {
-    background-image: -moz-linear-gradient(90deg, rgb(169, 0, 1) 0%, rgb(237, 43, 44) 100%);
-    background-image: -webkit-linear-gradient(90deg, rgb(169, 0, 1) 0%, rgb(237, 43, 44) 100%);
-    background-image: -ms-linear-gradient(90deg, rgb(169, 0, 1) 0%, rgb(237, 43, 44) 100%);
+    background-image: linear-gradient(90deg, rgb(169, 0, 1) 0%, rgb(237, 43, 44) 100%);
 }
 
 .gradient-6 {
-    background-image: -moz-linear-gradient(90deg, rgb(175, 4, 5) 0%, rgb(234, 41, 42) 99%);
-    background-image: -webkit-linear-gradient(90deg, rgb(175, 4, 5) 0%, rgb(234, 41, 42) 99%);
-    background-image: -ms-linear-gradient(90deg, rgb(175, 4, 5) 0%, rgb(234, 41, 42) 99%);
+    background-image: linear-gradient(90deg, rgb(175, 4, 5) 0%, rgb(234, 41, 42) 99%);
 }
 
 #wrapper {
@@ -402,49 +422,45 @@ a {
     border-radius: 4px;
 }
 
-.radius-20 {
-    border-radius: 20px;
-}
-
 .right {
     text-align: right;
 }
 
 // form //
 textarea,
-input[type="text"],
-input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
-input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"] {
+input {
+    @include transition3;
     border: none;
-    border-bottom: 2px solid #3A3B3E;
     outline: 0;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    font-size: 24px;
-    line-height: 40px;
-    border-radius: 0;
-    padding: 5px 24px;
+    font-size: 15px;
     width: 100%;
-    background: transparent;
+    border-radius: 25px;
     color: $color-3;
-    font-family: $font-3;
+    font-family: $font-2;
+    background-color: rgb(255, 255, 255);
+
+    &::placeholder {
+        color: $color-3 !important;
+        font-family: $font-2;
+    }
+}
+
+textarea {
+    padding: 14px 25px 24px;
+}
+
+input {
+    padding: 5px 25px;
+    height: 50px;
 }
 
 button {
     outline: none;
     border: none;
+    @include transition3;
 }
 
 textarea::placeholder,
@@ -574,12 +590,44 @@ input[type="color"]::placeholder {
     padding: 122px 0;
     margin-bottom: 0 !important;
 
+    &.pt-118 {
+        padding-top: 118px;
+    }
+
+    &.pt-105 {
+        padding-top: 105px;
+    }
+
+    &.pb-72 {
+        padding-bottom: 72px;
+    }
+
+    &.pt-118 {
+        padding-top: 118px;
+    }
+
+    &.pb-124 {
+        padding-bottom: 124px;
+    }
+
     &.pb-130 {
         padding-bottom: 130px;
     }
 
+    &.pb-120 {
+        padding-bottom: 120px;
+    }
+
+    &.pt-115 {
+        padding-top: 115px;
+    }
+
     &.pt-130 {
         padding-top: 130px;
+    }
+
+    &.pt-125 {
+        padding-top: 125px;
     }
 
     &.pb-104 {
@@ -592,6 +640,10 @@ input[type="color"]::placeholder {
 
     &.pb-100 {
         padding-bottom: 100px;
+    }
+
+    &.pt-72 {
+        padding-top: 72px;
     }
 }
 

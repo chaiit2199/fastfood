@@ -489,6 +489,20 @@
     });
   };
 
+  var dropdown = function (id) {
+    var obj = $(id + '.dropdown');
+    var btn = obj.find('.btn-selector');
+    var dd = obj.find('ul');
+    var opt = dd.find('li');
+    opt.on("click", function () {
+      // dd.hide();
+      var txt = $(this).text();
+      opt.removeClass("active");
+      $(this).toggleClass("active");
+      btn.text(txt);
+    });
+  };
+
   let close_popup = document.querySelector(".close-popup");
   if (close_popup) {
     close_popup.addEventListener("click", function () {
@@ -535,6 +549,9 @@
     alertBox();
     tabs();
     goTop();
+    dropdown('#hours');
+    dropdown('#date');
+    dropdown('#guest');
     flatAccordion();
     popupVideo();
     flatCounter();

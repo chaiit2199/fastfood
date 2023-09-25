@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="assets/images/favicon.png" />
     <link rel="apple-touch-icon-precomposed" href="assets/images/favicon.png" />
   </head>
-  <body class="body header-fixed main counter-scroll">
+  <body class="body header-fixed main">
     <!-- preloade -->
     <!-- <div class="preload preload-container">
       <p class="heading-preload" data-text="loading">loading</p>
@@ -21,9 +21,9 @@
     <!-- preload -->
     <div id="wrapper"> 
       <!-- Header -->
-      <header id="header_main" class="header style2 gradient flex items-center topbar">
+      <header class="header style2 gradient flex items-center topbar">
         <div class="container w_1650">
-          <div id="site-header" class="wow fadeIn" data-wow-delay=".3s"> 
+          <div id="site-header"> 
            
             <div class="site-header-inner w-full flex">
               <div class="header__logo mt3">
@@ -239,14 +239,42 @@
                       <li class="dropdown-item"><img src="./assets/images/icon/vietnam-icon.png" alt=""> <span>Viet Nam</span></li>
                   </ul>
                 </div> 
-                <img class="hamburger mr-12" src="./assets/images/icon/hamburger.png" alt="">
+                <div class="hamburger">
+                  <img src="./assets/images/icon/hamburger.png" class="icon_hamburger cursor-pointer" alt="">
+                  <div class="content">
+                    <div class="icon close_hamburger cursor-pointer">x</div>
+                    <h5 class="mb-36 color-3 text-spacing-1">Best Fast Food <br> Delicious And Quality.</h5>
+                    <ul class="mb-42 list">
+                      <li>
+                        <p class="text-spacing-1 uppercase text-500 mb-0 font-1 text-spacing-1">call to order</p>
+                        <p class="phone font-1 text-spacing-1">910-344-7520</p>
+                      </li>
+                      <li class="style">
+                      <p class="mb4 font2 color-3">62 Big Tree St, Livonia, New York 14487, USA</p>
+                        <p class="font2 color-3">themesflat@gmail.com</p>
+                      </li>
+                       <li>
+                        <p class="mb5 font2 color-3"><span>Monday – Thursday:</span> 8.00am – 21.00pm</p>
+                        <p class="mb5 font2 color-3"><span>Friday – Saturday : </span> 9.00am – 22.00pm</p>
+                        <p class="mb5 font2 color-3"><span>Sunday:</span> 8.00 – 23.00pm</p>
+                        <p class="mb5 font2 color-3"><span>Holiday: </span> <span class="color-2">Closed</span></p>
+                      </li>
+                    </ul>
+                    <ul class="social-style relative flex items-center justify-center">
+                      <li><a href="#" class="active"><i class="fab fa-facebook-f"></i></a></li>
+                      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fab fa-skype"></i></a></li>
+                      <li><a href="#"><i class="fab fa-facebook-messenger"></i></a></li>
+                      <li><a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"></path></svg>
+                      </a></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
               <!-- /#main-nav -->  
             </div>
-             <a class="flex justify-center mobile-logo">
-                <img src="./assets/images/logo/logo.png" alt="">
-              </a>
-              <div class="mobile-button"><span></span></div> 
+              <div class="mobile-button style2"><span></span></div> 
           </div>
            
         </div>
@@ -260,15 +288,15 @@
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
                     <div class="item-box-2">
-                      <div class="image mb-15">
+                      <Call class="image mb-10">
                         <img src="./assets/images/common/item_22.png" alt="">
-                      </div>
+                      </Call Us To Orderdiv>
                       <h6 class="center color-3 mb-0"><a href="#">Burgers</a></h6>
                     </div>
                   </div>
                   <div class="swiper-slide">
                     <div class="item-box-2">
-                      <div class="image mb-15">
+                      <div class="image mb-10">
                         <img src="./assets/images/common/item_23.png" alt="">
                       </div>
                       <h6 class="center color-3 mb-0"><a href="#">Sandwich</a></h6>
@@ -276,7 +304,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="item-box-2">
-                      <div class="image mb-15">
+                      <div class="image mb-10">
                         <img src="./assets/images/common/item_24.png" alt="">
                       </div>
                       <h6 class="center color-3 mb-0"><a href="#">Drinks</a></h6>
@@ -284,7 +312,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="item-box-2">
-                      <div class="image mb-15">
+                      <div class="image mb-10">
                         <img src="./assets/images/common/item_25.png" alt="">
                       </div>
                       <h6 class="center color-3 mb-0"><a href="#">Appetizer</a></h6>
@@ -292,7 +320,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="item-box-2">
-                      <div class="image mb-15">
+                      <div class="image mb-10">
                         <img src="./assets/images/common/item_26.png" alt="">
                       </div>
                       <h6 class="center color-3 mb-0"><a href="#">Fried Chicken</a></h6>
@@ -300,7 +328,7 @@
                   </div>
                   <div class="swiper-slide">
                     <div class="item-box-2">
-                      <div class="image mb-15">
+                      <div class="image mb-10">
                         <img src="./assets/images/common/item_27.png" alt="">
                       </div>
                       <h6 class="center color-3 mb-0"><a href="#">Salad</a></h6>
@@ -325,7 +353,7 @@
                         <div class="image">
                           <img src="./assets/images/common/item_29.png" alt="">
                         </div>
-                        <div class="content"> 
+                        <div class="content pl-20 pb-16"> 
                           <h2 class="capitalize mb-0">Burger. <br>
                             Fried Chicken. <br>
                             Spaghetti. <br>
@@ -341,9 +369,9 @@
                   <div class="box relative">
                     <img class="bg_slide" src="./assets/images/backgroup/bg-section-4.jpg" alt="">
                     <div class="content">
-                      <h5>Call Us To Order</h5>
-                      <h3>910-344-7520</h3>
-                      <p class="white mb-30">Call us to order today, or order online!</p>
+                      <h5 class="mb-12">Call Us To Order</h5>
+                      <h3 class="mb-12">910-344-7520</h3>
+                      <p class="white mb-34">Call us to order today, or order online!</p>
                       <div class="flex">
                         <a href="#" class="tf-button">order online now</a>
                       </div>
@@ -352,10 +380,10 @@
                   <div class="box style relative">
                     <img class="bg_slide" src="./assets/images/backgroup/bg-section-5.jpg" alt="">
                     <div class="content"> 
-                      <h3>Basilico App Download Now!</h3>
-                      <p class="white mb-30">Super Fast Order! Super Delivery!</p>
+                      <h3 class="mb2">Basilico App Download Now!</h3>
+                      <p class="white mb-32">Super Fast Order! Super Delivery!</p>
                       <div class="flex">
-                        <a href="#" class="flex img-link mr-15"><img src="./assets/images/backgroup/button-1.png" alt=""></a>
+                        <a href="#" class="flex img-link mr-10"><img src="./assets/images/backgroup/button-1.png" alt=""></a>
                         <a href="#" class="flex img-link"><img src="./assets/images/backgroup/button-2.png" alt=""></a>
                       </div>
                     </div>
@@ -372,7 +400,7 @@
         <div class="container w_1920 pd0">
           <div class="row">
             <div class="col-md-12">
-              <div class="gradient about-inner wow fadeIn" data-wow-delay=".2s">
+              <div class="gradient about-inner style2 wow fadeIn" data-wow-delay=".2s">
                 <div class="icon-bg icon_1 wow fadeInLeft" data-wow-delay=".3s">
                   <img src="./assets/images/icon/chips.png" alt="">
                 </div>
@@ -498,54 +526,57 @@
       <section class="pt-60">
         <div class="container w_1920 pd0">
           <div class="row"> 
-            <div class="col-md-4 pd0 wow fadeIn" data-wow-delay=".3s">
-              <div class="icon-box gradient-3 mobile-mb30">
+            <div class="col-lg-4 col-md-12 pd0 wow fadeIn" data-wow-delay=".3s">
+              <div class="icon-box style2 gradient-3 mobile-mb30">
                 <div class="top">
                   <div class="left">
-                    <h4>Gift Vouchers For Friends</h4>
+                    <h4>Gift Vouchers <br class="show-desktop"> For Friends</h4>
+                    <p>Give gift vouchers to your friends and relatives to enjoy our fast food, Nunc id ullamcorper.</p>
+                    <a class="action" href="#">buy gift now
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#0c0c0c" fill-rule="evenodd" d="M12.346 7.507a.75.75 0 0 1 1.059-.072l4.588 4a.75.75 0 0 1 0 1.13l-4.588 4a.75.75 0 1 1-.986-1.13l3.08-2.685H6.5a.75.75 0 0 1 0-1.5h8.998l-3.08-2.685a.75.75 0 0 1-.072-1.058z" clip-rule="evenodd" data-original="#000000" class="" opacity="1"></path></g></svg>
+                    </a>
                   </div>
                   <div class="icon">
                     <img src="./assets/images/common/item_12.png" alt="">
                   </div>
                 </div>
-                <p>Give gift vouchers to your friends and relatives to enjoy our fast food, Nunc id ullamcorper.</p>
-                <a class="action" href="#">buy gift now
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#0c0c0c" fill-rule="evenodd" d="M12.346 7.507a.75.75 0 0 1 1.059-.072l4.588 4a.75.75 0 0 1 0 1.13l-4.588 4a.75.75 0 1 1-.986-1.13l3.08-2.685H6.5a.75.75 0 0 1 0-1.5h8.998l-3.08-2.685a.75.75 0 0 1-.072-1.058z" clip-rule="evenodd" data-original="#000000" class="" opacity="1"></path></g></svg>
-                </a>
+                
               </div>
             </div>
 
-            <div class="col-md-4 pd0 wow fadeIn" data-wow-delay=".5s">
-              <div class="icon-box gradient-4 mobile-mb30">
+            <div class="col-lg-4 col-md-12 pd0 wow fadeIn" data-wow-delay=".5s">
+              <div class="icon-box style2 gradient-4 mobile-mb30">
                 <div class="top">
                   <div class="left">
                     <h4>First Order <br class="show-desktop"> Frist Discount</h4>
+                    <p>20% discount on first order,  Nam ut augue pulvinar turpis malesuada condimentum.</p>
+                <a class="action" href="#">order now
+                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#0c0c0c" fill-rule="evenodd" d="M12.346 7.507a.75.75 0 0 1 1.059-.072l4.588 4a.75.75 0 0 1 0 1.13l-4.588 4a.75.75 0 1 1-.986-1.13l3.08-2.685H6.5a.75.75 0 0 1 0-1.5h8.998l-3.08-2.685a.75.75 0 0 1-.072-1.058z" clip-rule="evenodd" data-original="#000000" class="" opacity="1"></path></g></svg>
+                </a>
                   </div>
                   <div class="icon">
                     <img src="./assets/images/common/item_13.png" alt="">
                   </div>
                 </div>
-                <p>20% discount on first order,  Nam ut augue pulvinar turpis malesuada condimentum.</p>
-                <a class="action" href="#">order now
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#0c0c0c" fill-rule="evenodd" d="M12.346 7.507a.75.75 0 0 1 1.059-.072l4.588 4a.75.75 0 0 1 0 1.13l-4.588 4a.75.75 0 1 1-.986-1.13l3.08-2.685H6.5a.75.75 0 0 1 0-1.5h8.998l-3.08-2.685a.75.75 0 0 1-.072-1.058z" clip-rule="evenodd" data-original="#000000" class="" opacity="1"></path></g></svg>
-                </a>
+                
               </div>
             </div>
 
-            <div class="col-md-4 pd0 wow fadeIn" data-wow-delay=".7s">
-              <div class="icon-box gradient-5">
+            <div class="col-lg-4 col-md-12 pd0 wow fadeIn" data-wow-delay=".7s">
+              <div class="icon-box style2 gradient-5">
                 <div class="top">
                   <div class="left">
-                    <h4>New Season New Food</h4>
+                    <h4>New Season <br class="show-desktop"> New Food</h4>
+                    <p>Discover new items at the store this summer, Aliquam faucibus lacus et dolor iaculis!</p>
+                    <a class="action" href="#">discovery new food
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#0c0c0c" fill-rule="evenodd" d="M12.346 7.507a.75.75 0 0 1 1.059-.072l4.588 4a.75.75 0 0 1 0 1.13l-4.588 4a.75.75 0 1 1-.986-1.13l3.08-2.685H6.5a.75.75 0 0 1 0-1.5h8.998l-3.08-2.685a.75.75 0 0 1-.072-1.058z" clip-rule="evenodd" data-original="#000000" class="" opacity="1"></path></g></svg>
+                    </a>
                   </div>
                   <div class="icon">
                     <img src="./assets/images/common/item_14.png" alt="">
                   </div>
                 </div>
-                <p>Discover new items at the store this summer, Aliquam faucibus lacus et dolor iaculis!</p>
-                <a class="action" href="#">discovery new food
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#0c0c0c" fill-rule="evenodd" d="M12.346 7.507a.75.75 0 0 1 1.059-.072l4.588 4a.75.75 0 0 1 0 1.13l-4.588 4a.75.75 0 1 1-.986-1.13l3.08-2.685H6.5a.75.75 0 0 1 0-1.5h8.998l-3.08-2.685a.75.75 0 0 1-.072-1.058z" clip-rule="evenodd" data-original="#000000" class="" opacity="1"></path></g></svg>
-                </a>
+                
               </div>
             </div> 
           </div>
@@ -556,18 +587,18 @@
         <div class="container w_1920 pd0">
           <div class="row">
             <div class="col-md-6 pd0">
-              <div class="video wow fadeIn" data-wow-delay=".2s">
-                <img class="img_video" src="./assets/images/backgroup/video_1.jpg" alt="">
+              <div class="video wow fadeIn h-full" data-wow-delay=".2s">
+                <img class="img_video w-full h-full" src="./assets/images/backgroup/video_1.jpg" alt="">
                 <div class="wrap-video">
                     <a href="https://www.youtube.com/watch?v=Celf7jSGtNc" class="popup-youtube pulse_three">
                         <img src="./assets/images/icon/video.svg" alt="">
                     </a>
                 </div>
-            </div>
+              </div>
             </div>
             <div class="col-md-6 pd0">
-              <div class="div flex items-center justify-center h-full content-box pl-84">
-                <h2 class="color-3 mb-0">
+              <div class="div flex items-center justify-center h-full content-box pl-84 pr17 pt-30 pb-30 mobile-block">
+                <h2 class="color-3 mb-0 lh1-2 pb-10 text-spacing-1 pr-35">
                   Welcome! <br class="show-desktop">
                   We are a fast food
                   shop faster than the
@@ -577,14 +608,14 @@
               </div>
             </div>
 
-            <div class="col-md-6 pd0">
-              <div class="div flex items-center justify-center h-full content-box pl-84 gradient pr-84 pt-130 pb-130">
-                <div class="inner">
-                  <h2 class="color-3 mb-30 white">
+            <div class="col-lg-6 col-md-12 pd0">
+              <div class="div flex items-end justify-center h-full content-box pl-96 gradient pr-84 pt-40 pb-132 mobile-block">
+                <div class="inner pr-110 pb4">
+                  <h2 class="color-3 mb-20 white lh1-2 text-spacing-1">
                     Do You Have An
                     Event? <span class="color-main">Book A Table.</span>
                   </h2>
-                  <p class="color-5 mb-30">Make online reservations, read restaurant reviews from dinners,
+                  <p class="color-5 mb-20 pr-90">Make online reservations, read restaurant reviews from dinners,
                   and earn points towards free meals. OpenTable is a real time
                   online reservation.
                   </p>
@@ -602,8 +633,8 @@
                 <a href="#" class="button style2 ml-15"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#0c0c0c" fill-rule="evenodd" d="M12.346 7.507a.75.75 0 0 1 1.059-.072l4.588 4a.75.75 0 0 1 0 1.13l-4.588 4a.75.75 0 1 1-.986-1.13l3.08-2.685H6.5a.75.75 0 0 1 0-1.5h8.998l-3.08-2.685a.75.75 0 0 1-.072-1.058z" clip-rule="evenodd" data-original="#000000" class="" opacity="1"></path></g></svg></a>
               </div>
             </div>
-            <div class="col-md-6 pd0">
-              <div class="div relative flex items-center h-full">
+            <div class="col-lg-6 col-md-12 pd0">
+              <div class="div relative flex items-center h-full mb--8">
                 <img class="h-full" src="./assets/images/backgroup/bg-section-6.jpg" alt="">
                 <div class="content-box style2 absolute">
                   <h2 class="color-3 mb-30 white">
@@ -618,19 +649,19 @@
               </div>
             </div>
 
-            <div class="col-md-6 pd0">
-              <img class="h-full" src="./assets/images/backgroup/bg-section-7.jpg" alt="">
+            <div class="col-lg-6 col-md-12 pd0">
+              <img class="h-full w-full mb--8" src="./assets/images/backgroup/bg-section-7.jpg" alt="">
             </div>
-            <div class="col-md-6 pd0">
-              <div class="image-wraper flex">
-                <div class="image">
-                  <img class="h-full" src="./assets/images/common/item_30.jpg" alt="">
+            <div class="col-lg-6 col-md-12 pd0">
+              <div class="image-wraper flex overflow-hidden">
+                <div class="image mb--8">
+                  <img class="h-full w-full" src="./assets/images/common/item_30.jpg" alt="">
                 </div>
-                <div class="image flex items-center">
-                  <img class="h-full" src="./assets/images/common/item_31.jpg" alt="">
-                  <div class="content-box style2 absolute pl-84">
+                <div class="image flex items-center mb--8">
+                  <img class="h-full w-full" src="./assets/images/common/item_31.jpg" alt="">
+                  <div class="content-box style3 absolute">
                     <h2 class="style color-main">20k </h2>
-                    <h2 class="color-3 mb-30 white"> 
+                    <h2 class="color-3 white lh1-2 text-spacing-0_5"> 
                       Happy<br class="show-desktop">
                       Customer <span class="pl-4">:D</span>
                     </h2> 
@@ -640,12 +671,12 @@
               
             </div>
 
-            <div class="col-md-6 pd0">
-              <div class="image-wraper flex">
-                <div class="image relative flex items-center">
-                  <img class="h-full" src="./assets/images/common/item_32.jpg" alt="">
-                    <div class="content-box style2 absolute pl-84">
-                      <h2 class="color-3 mb-30 white"> 
+            <div class="col-xl-6 col-lg-12 pd0">
+              <div class="image-wraper flex mb--8  h-full mobile-h-auto">
+                <div class="image relative flex items-center h-full">
+                  <img class="h-full w-full" src="./assets/images/common/item_32.jpg" alt="">
+                    <div class="content-box style3 absolute">
+                      <h2 class="color-3 mb-36 white lh1-2 text-spacing-1"> 
                         What News
                         Do We Have?
                         Let Find Out
@@ -655,13 +686,13 @@
                       </div>
                     </div>
                 </div>
-                <div class="image">
-                  <img class="h-full" src="./assets/images/common/item_33.jpg" alt="">
+                <div class="image  h-full">
+                  <img class="h-full w-full" src="./assets/images/common/item_33.jpg" alt="">
                 </div>
               </div>
               
             </div>
-            <div class="col-md-6 pd0">
+            <div class="col-xl-6 col-lg-12 pd0">
               <div class="subscribe style2 h-full justify-center flex w-full flex-column">
                 <div class="overlay"><img src="./assets/images/backgroup/bg-section-9.jpg" alt=""></div>
                   <div class="relative w-full pl-120">
@@ -768,7 +799,6 @@
     <script src="app/js/jquery.min.js"></script>
     <script type="text/javascript" src="./app/js/jquery.cookie.min.js"></script>
     <script src="app/js/plugin.js"></script> 
-    <script src="app/js/bootstrap.bundle.min.js.map"></script>
     <script src="app/js/swiper-bundle.min.js"></script>
     <script src="app/js/swiper.js"></script>
     <script src="app/js/jquery-validate.js"></script>
@@ -809,6 +839,15 @@
           link.classList.add('active');
         });
       });
+      let hamburger = document.querySelector('.hamburger')
+      let icon_hamburger = hamburger.querySelector('.icon_hamburger')
+      let close_hamburger = hamburger.querySelector('.close_hamburger')
+      icon_hamburger.addEventListener('click', function(){
+        hamburger.classList.toggle("toggle")
+      })
+      close_hamburger.addEventListener('click', function(){
+        hamburger.classList.toggle("toggle")
+      })
     </script>
   </body>
 </html>

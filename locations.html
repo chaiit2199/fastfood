@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basilico - Fastfood</title>
+    <link rel="stylesheet" href="app/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="app/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="app/dist/app.css" />
+    <link rel="stylesheet" href="assets/font/font-awesome.css" />
+    <!-- Favicon and Touch Icons  -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" />
+    <link rel="apple-touch-icon-precomposed" href="assets/images/favicon.png" />
+  </head>
+  <body class="body header-fixed main">
+    <!-- preloade -->
+    <!-- <div class="preload preload-container">
+      <p class="heading-preload" data-text="loading">loading</p>
+    </div> -->
+    <!-- preload -->
+    <div id="wrapper">
+      <!-- topbar -->
+      <div class="topbar style">
+        <div class="container w_1200">
+          <div class="row">
+            <div class="col-md-12 wow fadeIn" data-wow-delay=".3s">
+              <div class="topbar-inner flex">
+                <div class="topbar__logo mt3">
+                  <a href="Home-Agency-Digital.html">
+                    <img src="assets/images/logo/logo.png" alt="" />
+                  </a>
+                </div>
+              <!-- /.mobile-button -->
+                <div class="topbar-info">
+                  <div class="flex items-center pr-30 tablet-r-auto hide-mobile hide-mobile">
+                    <div class="icon mr-15">
+                      <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <ul class="phone">
+                      <li>
+                        <p>Call and Order in</p>
+                        <p>910-344-7520</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="mr-25 hide-tablet">
+                    <img src="./assets/images/icon/dashed.png" alt="" />
+                  </div>
+                  <ul class="action gradient">
+                    <li>
+                      <a href="#">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          version="1.1"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          viewBox="0 0 512 512"
+                          style="enable-background: new 0 0 512 512"
+                          xml:space="preserve"
+                          class=""
+                        >
+                          <g>
+                            <path
+                              d="M256 0c-74.439 0-135 60.561-135 135s60.561 135 135 135 135-60.561 135-135S330.439 0 256 0zM423.966 358.195C387.006 320.667 338.009 300 286 300h-60c-52.008 0-101.006 20.667-137.966 58.195C51.255 395.539 31 444.833 31 497c0 8.284 6.716 15 15 15h420c8.284 0 15-6.716 15-15 0-52.167-20.255-101.461-57.034-138.805z"
+                              fill="#ffffff"
+                              data-original="#ffffff"
+                              class=""
+                              opacity="1"
+                            ></path>
+                          </g>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="active">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          version="1.1"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          width="512"
+                          height="512"
+                          x="0"
+                          y="0"
+                          viewBox="0 0 118.783 118.783"
+                          style="enable-background: new 0 0 512 512"
+                          xml:space="preserve"
+                          class=""
+                        >
+                          <g>
+                            <path
+                              d="M115.97 101.597 88.661 74.286a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S0 22.289 0 48.798c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM47.996 81.243c-17.917 0-32.443-14.525-32.443-32.443s14.526-32.444 32.443-32.444c17.918 0 32.443 14.526 32.443 32.444S65.914 81.243 47.996 81.243z"
+                              fill="#000000"
+                              data-original="#000000"
+                              class=""
+                            ></path>
+                          </g>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          version="1.1"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          width="512"
+                          height="512"
+                          x="0"
+                          y="0"
+                          viewBox="0 0 24 24"
+                          style="enable-background: new 0 0 512 512"
+                          xml:space="preserve"
+                          class=""
+                        >
+                          <g>
+                            <path
+                              d="M1 1a1 1 0 1 0 0 2h1.78a.694.694 35.784 0 1 .657.474l3.297 9.893c.147.44.165.912.053 1.362l-.271 1.087C6.117 17.41 7.358 19 9 19h12a1 1 0 1 0 0-2H9c-.39 0-.64-.32-.545-.697l.205-.818A.64.64 142.028 0 1 9.28 15H20a1 1 0 0 0 .95-.684l2.665-8A1 1 0 0 0 22.666 5H6.555a.694.694 35.783 0 1-.658-.474l-.948-2.842A1 1 0 0 0 4 1zm7 19a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"
+                              fill="#ffffff"
+                              data-original="#000000"
+                              class=""
+                              opacity="1"
+                            ></path>
+                          </g>
+                        </svg>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          version="1.1"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                          width="512"
+                          height="512"
+                          x="0"
+                          y="0"
+                          viewBox="0 0 512 512"
+                          style="enable-background: new 0 0 512 512"
+                          xml:space="preserve"
+                          class=""
+                        >
+                          <g>
+                            <path
+                              d="M376 30c-27.783 0-53.255 8.804-75.707 26.168-21.525 16.647-35.856 37.85-44.293 53.268-8.437-15.419-22.768-36.621-44.293-53.268C189.255 38.804 163.783 30 136 30 58.468 30 0 93.417 0 177.514c0 90.854 72.943 153.015 183.369 247.118 18.752 15.981 40.007 34.095 62.099 53.414C248.38 480.596 252.12 482 256 482s7.62-1.404 10.532-3.953c22.094-19.322 43.348-37.435 62.111-53.425C439.057 330.529 512 268.368 512 177.514 512 93.417 453.532 30 376 30z"
+                              fill="#ffffff"
+                              data-original="#000000"
+                              class=""
+                              opacity="1"
+                            ></path>
+                          </g>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="dropdown selector-drop" id="language">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M12 16a1 1 0 0 1-.71-.29l-6-6a1 1 0 0 1 1.42-1.42l5.29 5.3 5.29-5.29a1 1 0 0 1 1.41 1.41l-6 6a1 1 0 0 1-.7.29z" data-name="16" fill="#0c0c0c" data-original="#000000" class="" opacity="1"></path></g></svg>
+                      <img class="icon" src="./assets/images/icon/usa.svg" alt="">
+                      <a href="javascript:void(0);" class="btn-selector" data-bs-toggle="dropdown" aria-expanded="false">
+                        English
+                      </a>
+                      <ul class="dropdown-menu dropdown-menu-right">
+                          <li class="dropdown-item active"><img src="./assets/images/icon/usa.svg" alt=""> <span>English</span></li>
+                          <li class="dropdown-item"><img src="./assets/images/icon/vietnam-icon.png" alt=""> <span>Viet Nam</span></li>
+                      </ul>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end topbar -->
+      <!-- Header -->
+      <header id="header_main" class="header style1">
+        <div class="container w_1290">
+          <div id="site-header" class="style1"> 
+            <div class="site-header-inner w-full">
+              <div class="header__logo-mobile">
+                  <a href="#"><img src="assets/images/logo/logo2.png" alt=""></a>
+              </div>
+              <nav id="main-nav" class="main-nav">
+                <ul id="menu-primary-menu" class="menu">
+                  <li class="menu-item menu-item-has-children current-menu-item">
+                    <a href="index.html">
+                        Home
+                    </a>
+                    <ul class="sub-menu">
+                      <li>
+                        <a class="menu-item current-item" href="Home-01.html">Home 01</a>
+                        <a class="menu-item" href="Home-02.html">Home 02</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item menu-item-has-children">
+                    <a href="index.html">
+                        About Us
+                    </a>
+                    <ul class="sub-menu">
+                      <li>
+                        <a class="menu-item" href="Home-01.html">Home 01</a>
+                        <a class="menu-item" href="Home-02.html">Home 02</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item menu-item-has-children">
+                    <a href="index.html">
+                        Pages 
+                    </a>
+                    <ul class="sub-menu">
+                      <li>
+                        <a class="menu-item" href="Home-01.html">Home 01</a>
+                        <a class="menu-item" href="Home-02.html">Home 02</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="menu-item menu-item-has-children">
+                    <a href="index.html">
+                        Our Menu  
+                    </a>
+                    <ul class="sub-menu">
+                      <li>
+                        <a class="menu-item" href="Home-01.html">Home 01</a>
+                        <a class="menu-item" href="Home-02.html">Home 02</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="menu-item menu-item-has-children">
+                    <a href="index.html">
+                        Offers   
+                    </a>
+                    <ul class="sub-menu">
+                      <li>
+                        <a class="menu-item" href="Home-01.html">Home 01</a>
+                        <a class="menu-item" href="Home-02.html">Home 02</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item menu-item-has-children">
+                    <a href="index.html">
+                        Shop  
+                    </a>
+                    <ul class="sub-menu">
+                      <li>
+                        <a class="menu-item" href="Home-01.html">Home 01</a>
+                        <a class="menu-item" href="Home-02.html">Home 02</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item menu-item-has-children">
+                    <a href="index.html">
+                        Blog          
+                    </a>
+                    <ul class="sub-menu">
+                      <li>
+                        <a class="menu-item" href="Home-01.html">Home 01</a>
+                        <a class="menu-item" href="Home-02.html">Home 02</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item">
+                    <a href="index.html">
+                        Contact          
+                    </a> 
+                  </li>
+                </ul>
+              </nav>
+              <div class="right ml-auto flex justify-end items-center">
+                <a href="#" class="tf-button mr-25">order online now</a>
+                <div class="hamburger mr-12">
+                  <img class="icon_hamburger cursor-pointer" src="./assets/images/icon/hamburger.png" alt="">
+                  <div class="content">
+                    <div class="icon close_hamburger cursor-pointer">x</div>
+                    <h5 class="mb-36 color-3 text-spacing-1">Best Fast Food <br> Delicious And Quality.</h5>
+                    <ul class="mb-42 list">
+                      <li>
+                        <p class="text-spacing-1 uppercase text-500 mb-0 font-1 text-spacing-1">call to order</p>
+                        <p class="phone font-1 text-spacing-1">910-344-7520</p>
+                      </li>
+                      <li class="style">
+                      <p class="mb4 font2 color-3">62 Big Tree St, Livonia, New York 14487, USA</p>
+                        <p class="font2 color-3">themesflat@gmail.com</p>
+                      </li>
+                       <li>
+                        <p class="mb5 font2 color-3"><span>Monday – Thursday:</span> 8.00am – 21.00pm</p>
+                        <p class="mb5 font2 color-3"><span>Friday – Saturday : </span> 9.00am – 22.00pm</p>
+                        <p class="mb5 font2 color-3"><span>Sunday:</span> 8.00 – 23.00pm</p>
+                        <p class="mb5 font2 color-3"><span>Holiday: </span> <span class="color-2">Closed</span></p>
+                      </li>
+                    </ul>
+                    <ul class="social-style relative flex items-center justify-center">
+                      <li><a href="#" class="active"><i class="fab fa-facebook-f"></i></a></li>
+                      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                      <li><a href="#"><i class="fab fa-skype"></i></a></li>
+                      <li><a href="#"><i class="fab fa-facebook-messenger"></i></a></li>
+                      <li><a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"></path></svg>
+                      </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- /#main-nav -->  
+            </div>
+              <a class="flex justify-center mobile-logo">
+                <img src="./assets/images/logo/logo.png" alt="">
+              </a>
+              <div class="mobile-button"><span></span></div> 
+          </div>
+           
+        </div>
+      </header>
+      <!-- end Header -->
+      <section class="page-title relative mt-122">
+        <div class="container w_1890">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="page-title-inner">
+                <img class="icon_1 wow fadeInLeft" data-wow-delay=".2s" src="./assets/images/backgroup/icon_page-title.png" alt="">
+                <img class="icon_2 wow fadeInRight" data-wow-delay=".2s" src="./assets/images/backgroup/icon_2_page-title.png" alt="">
+                <div class="overlay"></div>
+                  <div class="breadcrumb flex flex-column items-center wow fadeIn" data-wow-delay=".2s">
+                    <h1 class="title center">Locations</h1>
+                    <ul>
+                      <li><a href="home-01.html">Home</a></li>
+                      <li><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#0c0c0c" fill-rule="evenodd" d="M12.346 7.507a.75.75 0 0 1 1.059-.072l4.588 4a.75.75 0 0 1 0 1.13l-4.588 4a.75.75 0 1 1-.986-1.13l3.08-2.685H6.5a.75.75 0 0 1 0-1.5h8.998l-3.08-2.685a.75.75 0 0 1-.072-1.058z" clip-rule="evenodd" data-original="#000000" class="" opacity="1"></path></g></svg>
+                        <span>Locations</span></li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      <section class="pt-130 pb-80">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-12 mb-50 wow fadeIn" data-wow-delay=".2s">
+              <div class="location-box gradient">
+                <h4>Basilico Fastfood <span class="color-main"> NewYork</span></h4>
+                <ul>
+                  <li><span>Address: 1614 E. Bell Rd #104. Salerno, AZ 85022</span></li>
+                  <li><span>Mail: themesflat@gmail.com</span></li>
+                  <li><span>Phone: (989) 867-1010</span></li>
+                  <li><span>Open Time: Mon - Fri: 10am - 11pm <br>
+                  Sat: 9am - 11pm, Holiday: Closes</span></li>
+                </ul>
+                <div class="flex">
+                  <a href="#" class="tf-button">get directions <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#0c0c0c" fill-rule="evenodd" d="M12.346 7.507a.75.75 0 0 1 1.059-.072l4.588 4a.75.75 0 0 1 0 1.13l-4.588 4a.75.75 0 1 1-.986-1.13l3.08-2.685H6.5a.75.75 0 0 1 0-1.5h8.998l-3.08-2.685a.75.75 0 0 1-.072-1.058z" clip-rule="evenodd" data-original="#000000" class="" opacity="1"></path></g></svg></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-50 wow fadeIn" data-wow-delay=".4s">
+               <div class="widget-gg-map flex hidden radius-20 h-full min-height-400">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d97101.88872869895!2d-74.22688511715344!3d40.487336736141906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1689125037376!5m2!1svi!2s" height="100%" style="border:0;width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 mb-50 wow fadeIn" data-wow-delay=".6s">
+              <div class="hidden radius-20 h-full">
+                <img class="h-full w-full" src="./assets/images/common/item_39.jpg" alt="">
+              </div>
+            </div>
+
+            
+            <div class="col-lg-4 col-md-12 mb-50 wow fadeIn" data-wow-delay=".2s">
+              <div class="hidden radius-20 h-full">
+                <img class="h-full w-full" src="./assets/images/common/item_40.jpg" alt="">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-50 wow fadeIn" data-wow-delay=".4s">
+               <div class="widget-gg-map flex hidden radius-20 h-full min-height-400">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d97101.88872869895!2d-74.22688511715344!3d40.487336736141906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1689125037376!5m2!1svi!2s" height="100%" style="border:0;width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-50 wow fadeIn" data-wow-delay=".6s">
+              <div class="location-box gradient">
+                <h4>Basilico Fastfood <span class="color-main"> LonDon</span></h4>
+                <ul>
+                  <li><span>Address: 1614 E. Bell Rd #104. Salerno, AZ 85022</span></li>
+                  <li><span>Mail: themesflat@gmail.com</span></li>
+                  <li><span>Phone: (989) 867-1010</span></li>
+                  <li><span>Open Time: Mon - Fri: 10am - 11pm <br>
+                  Sat: 9am - 11pm, Holiday: Closes</span></li>
+                </ul>
+                <div class="flex">
+                  <a href="#" class="tf-button">get directions <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#0c0c0c" fill-rule="evenodd" d="M12.346 7.507a.75.75 0 0 1 1.059-.072l4.588 4a.75.75 0 0 1 0 1.13l-4.588 4a.75.75 0 1 1-.986-1.13l3.08-2.685H6.5a.75.75 0 0 1 0-1.5h8.998l-3.08-2.685a.75.75 0 0 1-.072-1.058z" clip-rule="evenodd" data-original="#000000" class="" opacity="1"></path></g></svg></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 mb-50 wow fadeIn" data-wow-delay=".2s">
+              <div class="location-box gradient">
+                <h4>Basilico Fastfood <span class="color-main">NewYork</span></h4>
+                <ul>
+                  <li><span>Address: 1614 E. Bell Rd #104. Salerno, AZ 85022</span></li>
+                  <li><span>Mail: themesflat@gmail.com</span></li>
+                  <li><span>Phone: (989) 867-1010</span></li>
+                  <li><span>Open Time: Mon - Fri: 10am - 11pm <br>
+                  Sat: 9am - 11pm, Holiday: Closes</span></li>
+                </ul>
+                <div class="flex">
+                  <a href="#" class="tf-button">get directions <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path fill="#0c0c0c" fill-rule="evenodd" d="M12.346 7.507a.75.75 0 0 1 1.059-.072l4.588 4a.75.75 0 0 1 0 1.13l-4.588 4a.75.75 0 1 1-.986-1.13l3.08-2.685H6.5a.75.75 0 0 1 0-1.5h8.998l-3.08-2.685a.75.75 0 0 1-.072-1.058z" clip-rule="evenodd" data-original="#000000" class="" opacity="1"></path></g></svg></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 mb-50 wow fadeIn" data-wow-delay=".4s">
+               <div class="widget-gg-map flex hidden radius-20 h-full min-height-400">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d97101.88872869895!2d-74.22688511715344!3d40.487336736141906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1689125037376!5m2!1svi!2s" height="100%" style="border:0;width: 100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 mb-50 mobile-mb0 wow fadeIn" data-wow-delay=".6s">
+              <div class="hidden radius-20 h-full">
+                <img class="h-full w-full" src="./assets/images/common/item_41.jpg" alt="">
+              </div>
+            </div> 
+            
+          </div>
+        </div>
+      </section>
+      
+      <section class="tf-section restaurant-section pt-118 pb-120">
+        <div class="overlay"></div>
+        <div class="img-bg">
+          <img class="parallax" src="./assets/images/backgroup/bg-section-14.jpg" alt="">
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="restaurant-form">
+                <form action="#">
+                  <h2>Find a Restaurant</h2>
+                  <p class="desc">Search for our locations across the United States and Canada.</p>
+                  <fieldset class="mb-30">
+                     <input type="text" name="" id="" placeholder="Enter by zip/postal code, city and state, or address">
+                  </fieldset>
+                  <div class="flex flex-wrap">
+                    <button class="tf-button mr-12 mb-10" type="submit">use my location <i class="fas fa-map-marker-alt"></i></button>
+                    <button class="tf-button mb-10 style" type="submit">search location <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 118.783 118.783" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M115.97 101.597 88.661 74.286a47.75 47.75 0 0 0 7.333-25.488c0-26.509-21.49-47.996-47.998-47.996S0 22.289 0 48.798c0 26.51 21.487 47.995 47.996 47.995a47.776 47.776 0 0 0 27.414-8.605l26.984 26.986a9.574 9.574 0 0 0 6.788 2.806 9.58 9.58 0 0 0 6.791-2.806 9.602 9.602 0 0 0-.003-13.577zM47.996 81.243c-17.917 0-32.443-14.525-32.443-32.443s14.526-32.444 32.443-32.444c17.918 0 32.443 14.526 32.443 32.444S65.914 81.243 47.996 81.243z" fill="#ffffff" opacity="1" data-original="#000000" class=""></path></g></svg></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 flex items-center wow fadeIn" data-wow-delay=".3s">
+              <div class="line mr-30"></div>
+              <a class="flex justify-center footer-logo">
+                <img src="./assets/images/logo/logo2.png" alt="">
+              </a>
+              <div class="line ml-30"></div>
+            </div>
+            <div class="col-md-12 wow fadeIn" data-wow-delay=".3s">
+              <ul class="mt-35 footer-link flex justify-center">
+                <li><a href="#">About Basilico</a></li>
+                <li><a href="#">Order Food</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Offers</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Gift Voucher</a></li>
+                <li><a href="#">FAQs</a></li>
+              </ul>
+            </div>
+
+            <div class="col-md-4 border-right mobile-mb30 wow fadeIn" data-wow-delay=".3s">
+              <h5 class="white uppercase mb-22 center text-spacing-1">Information</h5>
+              <ul class="list center">
+                <li><span>62 Big Tree St, Livonia, New York 14487, USA</span></li>
+                <li><span>customer_support@example.com</span></li>
+                <li><span>Terms and Conditions</span></li>
+                <li><span>Warranty and Services</span></li>
+              </ul>
+            </div>
+            <div class="col-md-4 border-right mobile-mb30 wow fadeIn" data-wow-delay=".4s">
+              <h5 class="white uppercase mb-22 center text-spacing-1">contact & order</h5>
+              <ul class="list center mb-30">
+                <li class="mb-10"><span>Call Us To Order or Order Online</span></li>
+                <li><a class="call" href="tel:9103447520">910-344-7520</a></li>
+              </ul>
+              <div class="flex justify-center">
+                <a href="#" class="tf-button">order online now</a>
+              </div>
+            </div>
+
+            <div class="col-md-4 wow fadeIn" data-wow-delay=".5s">
+              <h5 class="white uppercase mb-22 center text-spacing-1">Hour time open</h5>
+              <ul class="list center mb-30">
+                <li><span>Monday – Thursday: <span>8.00am – 21.00pm</span></span></li>
+                <li><span>Friday – Saturday : <span>9.00am – 22.00pm</span></span></li>
+                <li><span>Sunday: <span>8.00 – 23.00pm</span></span></li>
+                <li><span>Holiday: <span class="color-main">Closed</span></span></li>
+              </ul> 
+            </div>
+
+            <div class="col-md-12 wow fadeIn" data-wow-delay=".3s">
+              <div class="footer-social flex items-center justify-center"> 
+                <ul class="social flex items-center justify-center" >
+                  <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-skype"></i></a></li>
+                  <li><a href="#"><i class="fab fa-facebook-messenger"></i></a></li>
+                  <li><a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+                  </a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="footer-bottom flex items-center">
+                <p class="copyright">© Copyright <a href="#">Themesflat</a> 2013. All Rights Reserved.</p>
+                <div class="payment-methods"><li>
+                  <a class="flex image" href="#"><img src="./assets/images/common/payment-methods.png" alt=""></a> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <a id="scroll-top"></a> 
+    <script src="app/js/jquery.min.js"></script>
+    <script type="text/javascript" src="./app/js/jquery.cookie.min.js"></script>
+    <script src="app/js/plugin.js"></script> 
+    <script src="app/js/swiper-bundle.min.js"></script>
+    <script src="app/js/swiper.js"></script>
+    <script src="app/js/jquery-validate.js"></script>
+    <script src="app/js/countto.js"></script>
+    <script src="app/js/jquery.easing.js"></script>
+    <script src="app/js/wow.min.js"></script>
+    <script src="app/js/app.js"></script>
+    <script src="app/js/bootstrap.bundle.min.js"></script>
+    <script src="app/js/simpleParallax.min.js"></script>
+    <script>
+      var image = document.getElementsByClassName("parallax");
+      new simpleParallax(image);
+    </script>
+
+    <script>
+      var swiper = new Swiper('.sl-testimonial', {
+        direction: 'horizontal',
+        loop: false,
+        navigation: {
+          nextEl: '.swiper-next-testimonial',
+          prevEl: '.swiper-prev-testimonial',
+        },
+      });
+
+      var testimonialLinks = document.querySelectorAll('.testimonial-list-item a');
+      testimonialLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          var slideIndex = parseInt(link.getAttribute('data-slide-index'));
+          swiper.slideTo(slideIndex, 500);
+          testimonialLinks[slideIndex].classList.add('active')
+          // Xóa lớp 'active' khỏi tất cả các link
+          testimonialLinks.forEach(function(link) {
+            link.classList.remove('active');
+          });
+          
+          // Thêm lớp 'active' cho link được click
+          link.classList.add('active');
+        });
+      });
+
+      let hamburger = document.querySelector('.hamburger')
+      let icon_hamburger = hamburger.querySelector('.icon_hamburger')
+      let close_hamburger = hamburger.querySelector('.close_hamburger')
+      icon_hamburger.addEventListener('click', function(){
+        hamburger.classList.toggle("toggle")
+      })
+      close_hamburger.addEventListener('click', function(){
+        hamburger.classList.toggle("toggle")
+      })
+    </script>
+  </body>
+</html>
