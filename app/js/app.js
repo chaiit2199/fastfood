@@ -4,8 +4,7 @@
  * eventLoad
  * ajaxContactForm
  * alertBox
- * tabs
- * tabs2
+ * tabs 
  * goTop
  * flatAccordion
  * popupVideo
@@ -522,22 +521,6 @@
         this.parentElement.classList.toggle("active");
       });
   }
-  const queryString = window.location.search;
-
-  if (queryString === "" || queryString === undefined) {
-  } else {
-    const urlParams = new URLSearchParams(queryString);
-    const tab = urlParams.get("is");
-    if (tab == "light") {
-      console.log("light");
-      $(".body").removeClass("is_dark");
-      $(".body").addClass("is_light");
-    } else if (tab == "dark") {
-      $(".body").addClass("is_dark");
-      $(".body").removeClass("is_light");
-    }
-  }
-
 
   // Dom Ready
   $(function () {
@@ -552,6 +535,7 @@
     dropdown('#hours');
     dropdown('#date');
     dropdown('#guest');
+    dropdown('#popularity');
     flatAccordion();
     popupVideo();
     flatCounter();

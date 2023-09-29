@@ -3,7 +3,39 @@
 /* Footer
 -------------------------------------------------------------- */
 .flat-tabs {
+    .switch-menu-tab {
+        position: relative;
+        z-index: 9;
+        display: flex;
+        justify-content: space-between;
+
+        .btn-menu {
+            position: relative !important;
+            width: 47px;
+            height: 47px;
+            background-color: $color-2;
+            border-radius: 50%;
+            @include flex(center, center);
+
+            svg {
+                width: 28px;
+                height: 28px;
+
+                path {
+                    @include transition3;
+                    fill: $white;
+                }
+            }
+        }
+
+        .reverse {
+            transform: rotate(180deg);
+        }
+    }
+
     .menu-tab {
+        margin-top: -114px;
+
         &.menu-item-box {
             justify-content: space-between;
             border-bottom: 1px solid rgba(200, 200, 200, 0.7);
@@ -50,6 +82,151 @@
 
 
     }
+
+    &.style2 {
+        .content-tab .content-inner>div {
+            width: calc((100% - 60px) / 3)
+        }
+
+        .menu-tab {
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid rgba(200, 200, 200, 0.6);
+            margin-bottom: 58px;
+
+            li {
+                &:hover {
+                    cursor: pointer;
+                }
+
+                padding: 32px 0;
+                font-size: 25px;
+                font-family: $font-1;
+                color: #999999;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                margin: 0 24px;
+                position: relative;
+                @include transition3;
+
+                &:hover,
+                &.active {
+                    color: $color-3;
+
+                    &::before {
+                        width: 100%;
+                    }
+                }
+
+                &::before {
+                    @include transition3;
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 4px;
+                    background-color: rgb(245, 168, 28);
+                    border-radius: 3px;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+
+    &.style3 {
+        .content-tab .content-inner>div {
+            width: calc((100% - 60px) / 3)
+        }
+
+        .menu-tab {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 75px;
+            margin-top: 0;
+
+            li {
+                &:hover {
+                    cursor: pointer;
+                }
+
+                padding: 13px 0;
+                font-size: 20px;
+                font-family: $font-1;
+                color: $color-3;
+                font-weight: 500;
+                letter-spacing: 1.7px;
+                margin: 0 26px;
+                position: relative;
+                @include transition3;
+                text-transform: uppercase;
+
+                &:hover,
+                &.active {
+                    color: $color-2;
+
+                    &::before {
+                        width: 100%;
+                    }
+                }
+
+                &::before {
+                    @include transition3;
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 4px;
+                    background-color: rgb(245, 168, 28);
+                    border-radius: 3px;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+
+    &.style4 {
+        .menu-tab {
+            margin-top: 0;
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                width: calc((100% - 60px) / 3);
+                padding: 35px 25px;
+                border-radius: 20px;
+                overflow: hidden;
+                background: url('./../../assets/images/backgroup/ng-item_2.png') center center no-repeat;
+                background-size: cover;
+                @include flex(center, center);
+
+                img {
+                    max-width: 125px;
+                    width: 100%;
+                }
+            }
+        }
+
+        .content-tab {
+            .content-inner {
+                .image {
+                    padding: 140px 30px;
+                    width: 100%;
+                    background: url('./../../assets/images/backgroup/ng-item.png') center center no-repeat;
+                    background-size: cover;
+                    @include flex(center, center);
+                    border-radius: 20px;
+                    overflow: hidden;
+
+                    img {
+                        max-width: 450px;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .content-inner {
@@ -69,5 +246,53 @@
         visibility: visible;
         position: relative;
         transform: scale(1) translate(0, 0%);
+    }
+}
+
+.tabcontent {
+    display: none;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+.tab-style2 {
+    ul {
+        display: flex;
+        margin-bottom: 36px;
+
+        li {
+            font-size: 20px;
+            padding: 25px 0;
+            position: relative;
+            margin-right: 42px;
+            font-family: $font-1;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            color: $color-3;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.active {
+                &::before {
+                    width: 100%;
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                background-color: $color-main;
+                width: 0;
+                height: 3px;
+                left: 0;
+                bottom: 0;
+                border-radius: 2px;
+                @include transition3;
+            }
+        }
     }
 }

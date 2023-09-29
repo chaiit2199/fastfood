@@ -28,6 +28,23 @@
 }
 
 @include res1440 {
+    .delivery-method {
+        .box {
+            padding-right: 15px !important;
+
+            &:nth-child(4) {
+                padding-right: 0 !important;
+            }
+        }
+
+        .tf-button {
+            padding: 6px 20px;
+        }
+    }
+
+    .delivery-method {
+        padding: 30px;
+    }
 
     .subscribe.style2,
     .content-box.style3 {
@@ -95,6 +112,38 @@
 }
 
 @include res1200 {
+    .icon-list.style2 {
+        margin: 0;
+    }
+
+    .product-5 .content {
+        padding: 30px;
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
+
+        p {
+            margin-bottom: 20px !important;
+        }
+    }
+
+    .product-4 .tf-button {
+        padding: 6px 20px;
+    }
+
+    .delivery-method {
+        flex-wrap: wrap;
+        padding: 30px 30px 10px;
+
+        .box {
+            width: calc((100% - 30px) / 2) !important;
+            margin-bottom: 20px;
+
+            &:nth-child(4) {
+                justify-content: center !important;
+            }
+        }
+    }
+
     .book-table {
         padding: 80px 30px;
     }
@@ -230,9 +279,38 @@
     .location-box {
         padding: 30px;
     }
+
+    .content-offer .list li {
+        width: calc((100% - 15px) / 2);
+    }
 }
 
 @include res991 {
+    .flat-tabs.style3 .content-tab .content-inner>div {
+        width: calc((100% - 30px) / 2);
+    }
+
+    .flat-tabs.style3 .menu-tab {
+        flex-wrap: wrap;
+    }
+
+    .flat-tabs.style2 .content-tab .content-inner>div {
+        width: calc((100% - 30px) / 2);
+    }
+
+    .flat-tabs.style2 .menu-tab {
+        padding: 0 40px;
+        flex-wrap: wrap;
+
+        li {
+            padding: 20px 0;
+        }
+    }
+
+    .sl-product-wrapper.sl-product-wrapper {
+        padding: 0;
+    }
+
     .flat-tabs .content-tab .content-inner>div {
         width: 100%;
     }
@@ -504,6 +582,78 @@
 }
 
 @include res767 {
+    .info-details .info li {
+        width: 100%;
+    }
+
+    .info-details {
+        margin: 0 0 40px;
+        padding: 0;
+    }
+
+    .mobile-flex-start {
+        justify-content: flex-start !important;
+    }
+
+    .job-box {
+        ul {
+            display: block;
+
+            li {
+                &:nth-child(1) {
+                    padding-left: 23px;
+
+                    &::before {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        padding: 30px;
+        flex-wrap: wrap;
+
+        >div {
+            width: 100% !important;
+        }
+
+        .tf-button {
+            margin-top: 0;
+        }
+    }
+
+    p.pr-40 {
+        padding-right: 0;
+    }
+
+    .product-5 .content {
+        padding: 40px 40px;
+        width: calc(100% - 60px);
+        height: calc(100% - 60px);
+
+        p {
+            margin-bottom: 30px !important;
+        }
+    }
+
+    .flat-tabs.style3 .content-tab .content-inner>div,
+    .flat-tabs.style2 .content-tab .content-inner>div {
+        width: 100%;
+    }
+
+    .tf-section.pt-158 {
+        padding-top: 100px !important;
+    }
+
+    .delivery-method {
+        .box {
+            width: 100% !important;
+        }
+    }
+
+    .content-offer {
+        padding: 630p 40pxx;
+    }
 
     h2,
     .h2 {
@@ -908,6 +1058,21 @@
 }
 
 @include res600 {
+
+    .content-offer .list,
+    .content-offer .ic-list {
+        flex-wrap: wrap;
+
+        li {
+            margin-bottom: 10px;
+            width: 100%;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     .counter_wrapper {
         .box {
             width: 100%;
@@ -916,6 +1081,11 @@
 }
 
 @include res500 {
+    .flat-tabs.style4 .menu-tab li {
+        padding: 20px;
+        width: calc((100% - 30px) / 3);
+    }
+
     .product-item-style2 {
         display: block !important;
 

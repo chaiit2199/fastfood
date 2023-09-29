@@ -168,3 +168,27 @@ var swiper = new Swiper(".team-slider", {
     },
     speed: 1000,
 });
+
+var swiper = new Swiper(".sl-product-6", {
+    spaceBetween: 30,
+    loop: false,
+    navigation: {
+        nextEl: ".swiper-btn.btn-next-product-6",
+        prevEl: ".swiper-btn.btn-prev-product-6",
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        767: {
+            slidesPerView: 2,
+        },
+        991: {
+            slidesPerView: 3,
+        },
+        1280: {
+            slidesPerView: 3,
+        },
+    },
+    speed: 1000,
+});

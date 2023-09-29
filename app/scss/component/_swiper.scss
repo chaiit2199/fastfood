@@ -156,4 +156,15 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+
+    &.sl-product-wrapper {
+        max-width: 1730px;
+        padding: 0 80px;
+    }
+}
+
+.wrapper-product-6 {
+    margin: 0 auto;
+    max-width: 1170px;
+    width: 100%;
 }
