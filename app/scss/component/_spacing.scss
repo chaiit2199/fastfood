@@ -1,117 +1,114 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 /* TF Spacing
 -------------------------------------------------------------- */
 
 $spaceamounts: (
-    0,
-    4,
-    5,
-    6,
-    8,
-    10,
-    12,
-    14,
-    15,
-    16,
-    18,
-    20,
-    22,
-    23,
-    24,
-    25,
-    26,
-    27,
-    28,
-    30,
-    32,
-    33,
-    34,
-    35,
-    36,
-    38,
-    40,
-    42,
-    43,
-    44,
-    45,
-    48,
-    50,
-    55,
-    64,
-    67,
-    70,
-    72,
-    75,
-    76,
-    80,
-    84,
-    90,
-    96,
-    100,
-    105,
-    110,
-    122,
-    123,
-    126,
-    120,
-    130,
-    132
+  0,
+  4,
+  5,
+  6,
+  8,
+  10,
+  12,
+  14,
+  15,
+  16,
+  18,
+  20,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  30,
+  32,
+  33,
+  34,
+  35,
+  36,
+  38,
+  40,
+  42,
+  43,
+  44,
+  45,
+  48,
+  50,
+  55,
+  64,
+  67,
+  70,
+  72,
+  75,
+  76,
+  80,
+  82,
+  84,
+  90,
+  96,
+  100,
+  105,
+  110,
+  122,
+  123,
+  124,
+  126,
+  120,
+  130,
+  132,
+  145
 );
 // Adjust this to include the pixel amounts you need.
 
-
-$sides: (
-    top,
-    bottom,
-    left,
-    right
-);
+$sides: (top, bottom, left, right);
 
 // Leave this variable alone
 
 @each $side in $sides {
-    .m#{str-slice($side, 0, 1)}-auto {
-        margin-#{$side}: auto;
-    }
+  .m#{str-slice($side, 0, 1)}-auto {
+    margin-#{$side}: auto;
+  }
 }
 
 @each $space in $spaceamounts {
-    @each $side in $sides {
-        .m#{str-slice($side, 0, 1)}-#{$space} {
-            margin-#{$side}: #{$space}px;
-        }
-
-        .p#{str-slice($side, 0, 1)}-#{$space} {
-            padding-#{$side}: #{$space}px;
-        }
+  @each $side in $sides {
+    .m#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px;
     }
 
-    .m-#{$space} {
-        margin: #{$space}px;
+    .p#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px;
     }
+  }
 
-    .mx-#{$space} {
-        margin-left: #{$space}px;
-        margin-right: #{$space}px;
-    }
+  .m-#{$space} {
+    margin: #{$space}px;
+  }
 
-    .my-#{$space} {
-        margin-top: #{$space}px;
-        margin-bottom: #{$space}px;
-    }
+  .mx-#{$space} {
+    margin-left: #{$space}px;
+    margin-right: #{$space}px;
+  }
 
-    .p-#{$space} {
-        padding: #{$space}px;
-    }
+  .my-#{$space} {
+    margin-top: #{$space}px;
+    margin-bottom: #{$space}px;
+  }
 
-    .px-#{$space} {
-        padding-left: #{$space}px;
-        padding-right: #{$space}px;
-    }
+  .p-#{$space} {
+    padding: #{$space}px;
+  }
 
-    .py-#{$space} {
-        padding-top: #{$space}px;
-        padding-bottom: #{$space}px;
-    }
+  .px-#{$space} {
+    padding-left: #{$space}px;
+    padding-right: #{$space}px;
+  }
+
+  .py-#{$space} {
+    padding-top: #{$space}px;
+    padding-bottom: #{$space}px;
+  }
 }

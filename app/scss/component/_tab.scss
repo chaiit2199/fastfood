@@ -37,6 +37,7 @@
         margin-top: -114px;
 
         &.menu-item-box {
+            margin-top: 0;
             justify-content: space-between;
             border-bottom: 1px solid rgba(200, 200, 200, 0.7);
             margin-bottom: 80px;
@@ -44,6 +45,10 @@
             li {
                 width: calc((100% - 150px) / 6);
                 position: relative;
+
+                &:hover {
+                    cursor: pointer;
+                }
 
                 &.active {
                     &::before {
@@ -222,6 +227,7 @@
                     img {
                         max-width: 450px;
                         margin: auto;
+                        width: 100%;
                     }
                 }
             }

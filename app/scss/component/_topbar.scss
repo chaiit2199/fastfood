@@ -1,188 +1,188 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 /* Topbar
 -------------------------------------------------------------- */
 .header__logo,
 .topbar__logo {
-    width: 196px;
-    height: 59px;
+  width: 196px;
+  height: 59px;
 }
 
 .topbar {
-    &.style {
-        position: relative;
-        z-index: 11;
-        height: 115px;
-        @include flex(center, flex-start);
+  &.style {
+    position: relative;
+    z-index: 11;
+    height: 115px;
+    @include flex(center, flex-start);
+  }
+
+  #language {
+    position: relative;
+    z-index: 9;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    &.style2 {
+      .btn-selector {
+        color: $white;
+      }
+
+      svg {
+        path {
+          fill: $white;
+        }
+      }
     }
 
-    #language {
-        position: relative;
-        z-index: 9;
-        width: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
+    svg {
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      right: -18px;
+      top: 6px;
+      z-index: -1;
+    }
 
-        &.style2 {
-            .btn-selector {
-                color: $white;
-            }
+    .icon {
+      position: absolute;
+      left: 0;
+    }
 
-            svg {
-                path {
-                    fill: $white;
-                }
-            }
-        }
+    .btn-selector {
+      padding-left: 40px;
+      color: $color-3;
+      margin-right: -50px;
+      padding-right: 40px;
+    }
 
-        svg {
-            width: 15px;
-            height: 15px;
-            position: absolute;
-            right: -16px;
-            top: 6px;
-        }
+    .dropdown-menu {
+      max-width: 100px;
+      border: none;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 
-        .icon {
-            position: absolute;
-            left: 0;
-        }
+      li {
+        @include flex(center, flex-start);
 
-        .btn-selector {
-            padding-left: 40px;
-            color: $color-3;
-            margin-right: -10px;
-        }
-
-        .dropdown-menu {
-            max-width: 100px;
-            border: none;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-
-            li {
-                @include flex(center, flex-start);
-
-                &:hover {
-                    cursor: pointer;
-                }
-
-                img {
-                    margin-right: 8px;
-                }
-
-                span {
-                    color: $color-3;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    max-width: 100%;
-                    display: inline-block;
-                }
-            }
+        &:hover {
+          cursor: pointer;
         }
 
         img {
-            width: 27px;
-            height: 27px;
+          margin-right: 8px;
         }
+
+        span {
+          color: $color-3;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 100%;
+          display: inline-block;
+        }
+      }
     }
 
-    .action {
-        height: 50px;
-        padding: 0 16px;
+    img {
+      width: 27px;
+      height: 27px;
+    }
+  }
+
+  .action {
+    height: 50px;
+    padding: 0 16px;
+    @include flex(center, center);
+    border-radius: 25px;
+    margin-right: 28px;
+
+    &.bg-2 {
+      li {
+        a {
+          &.active,
+          &:hover {
+            background-color: $black;
+
+            svg {
+              path {
+                fill: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    li {
+      a {
+        background-color: transparent;
+        width: 41px;
+        height: 41px;
+        margin: 0 4px;
+        border-radius: 50%;
         @include flex(center, center);
-        border-radius: 25px;
-        margin-right: 28px;
 
-        &.bg-2 {
-            li {
-                a {
+        svg {
+          position: relative;
+          width: 15px;
+          height: 15px;
 
-                    &.active,
-                    &:hover {
-                        background-color: $black;
-
-                        svg {
-                            path {
-                                fill: $white;
-                            }
-                        }
-                    }
-                }
-            }
+          path {
+            @include transition3;
+            fill: $white;
+          }
         }
 
-        li {
-            a {
-                background-color: transparent;
-                width: 41px;
-                height: 41px;
-                margin: 0 4px;
-                border-radius: 50%;
-                @include flex(center, center);
+        &:hover,
+        &.active {
+          background-color: rgba(255, 255, 255, 0.1);
 
-                svg {
-                    position: relative;
-                    width: 15px;
-                    height: 15px;
-
-                    path {
-                        @include transition3;
-                        fill: $white;
-                    }
-                }
-
-                &:hover,
-                &.active {
-                    background-color: rgba(255, 255, 255, 0.1);
-
-                    svg {
-                        path {
-                            fill: $color-main;
-                        }
-                    }
-                }
+          svg {
+            path {
+              fill: $color-main;
             }
+          }
+        }
+      }
+    }
+  }
+
+  .topbar-info {
+    width: calc(100% - 196px);
+    @include flex(center, flex-end);
+    margin-top: -5px;
+
+    .phone {
+      p {
+        &:nth-child(1) {
+          font-family: "Cerebri-Italic";
+          color: $color-3;
+          font-size: 15px;
         }
 
+        &:nth-child(2) {
+          color: $color-2;
+          font-family: $font-1;
+          font-size: 30px;
+          line-height: 35px;
+          font-style: italic;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+        }
+      }
     }
 
-    .topbar-info {
-        width: calc(100% - 196px);
-        @include flex(center, flex-end);
-        margin-top: -5px;
+    .icon {
+      width: 50px;
+      height: 50px;
+      background-color: $color-main;
+      border-radius: 50%;
+      @include flex(center, center);
 
-        .phone {
-            p {
-                &:nth-child(1) {
-                    font-family: "Cerebri-Italic";
-                    color: $color-3;
-                    font-size: 15px;
-                }
-
-                &:nth-child(2) {
-                    color: $color-2;
-                    font-family: $font-1;
-                    font-size: 30px;
-                    line-height: 35px;
-                    font-style: italic;
-                    font-weight: 600;
-                    letter-spacing: 0.5px;
-                }
-            }
-        }
-
-        .icon {
-            width: 50px;
-            height: 50px;
-            background-color: $color-main;
-            border-radius: 50%;
-            @include flex(center, center);
-
-            i {
-                color: $white;
-            }
-        }
+      i {
+        color: $white;
+      }
     }
+  }
 }

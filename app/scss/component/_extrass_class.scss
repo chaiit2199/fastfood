@@ -1,271 +1,299 @@
-@use '../abstracts/' as *;
+@use "../abstracts/" as *;
 
 /* Extrass Class
 -------------------------------------------------------------- */
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .items-center {
-    align-items: center;
+  align-items: center;
 }
 
 .items-start {
-    align-items: flex-start;
+  align-items: flex-start;
 }
 
 .mb2 {
-    margin-bottom: 2px;
+  margin-bottom: 2px;
 }
 
 .mb1 {
-    margin-bottom: 1px;
+  margin-bottom: 1px;
 }
 
 .pt6 {
-    padding-top: 6px;
+  padding-top: 6px;
 }
 
 .mr8 {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 .pb4 {
-    padding-bottom: 4px;
+  padding-bottom: 4px;
 }
 
 .mb--8 {
-    margin-bottom: -8px;
+  margin-bottom: -8px;
 }
 
 .lh1-2 {
-    line-height: 1.2;
+  line-height: 1.2;
 }
 
 .pr17 {
-    padding-right: 17%;
+  padding-right: 17%;
 }
 
 .items-end {
-    align-items: flex-end;
+  align-items: flex-end;
 }
 
 .justify-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .justify-start {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .cursor-pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .font-1 {
-    font-family: $font-1;
+  font-family: $font-1;
 }
 
 .mb4 {
-    margin-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .mb5 {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .overflow-hidden {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .justify-end {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .justify-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .pd0 {
-    padding: 0 !important;
+  padding: 0 !important;
 }
 
 .radius-20 {
-    border-radius: 20px;
+  border-radius: 20px;
 }
 
 .radius-30 {
-    border-radius: 30px;
+  border-radius: 30px;
 }
 
 .w-full {
-    width: $w100;
+  width: $w100;
 }
 
 .h-full {
-    height: $w100;
+  height: $w100;
 }
 
 .uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .capitalize {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .fz-17 {
-    font-size: 17px;
-    line-height: 1.7;
+  font-size: 17px;
+  line-height: 1.7;
 }
 
 .relative {
-    position: relative;
+  position: relative;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .mb--5 {
-    margin-bottom: -5px;
+  margin-bottom: -5px;
 }
 
 .mt--25 {
-    margin-top: -25px;
+  margin-top: -25px;
 }
 
 .m--8 {
-    margin-top: -8px;
+  margin-top: -8px;
 }
 
 .absolute {
-    position: absolute;
+  position: absolute;
 }
 
 .mt3 {
-    margin-top: 3px;
+  margin-top: 3px;
 }
 
 .z-1 {
-    z-index: 1;
+  z-index: 1;
 }
 
 .pb5 {
-    padding-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 .pd-50 {
-    padding: 50px;
+  padding: 50px;
 }
 
 .w-96 {
-    width: 96px;
+  width: 96px;
 }
 
 .h-96 {
-    height: 96px;
+  height: 96px;
 }
 
 .max-width-1010 {
-    max-width: 1010px;
+  max-width: 1010px;
 }
 
 .text-spacing-0_5 {
-    letter-spacing: 0.5px;
+  letter-spacing: 0.5px;
 }
 
 .text-spacing-0_2 {
-    letter-spacing: 0.2px;
+  letter-spacing: 0.2px;
 }
 
 .hidden {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .mr4 {
-    margin-right: 4px;
+  margin-right: 4px;
 }
 
 .lh-28 {
-    line-height: 28px;
+  line-height: 28px;
 }
 
 .text-spacing-1 {
-    letter-spacing: 1px;
+  letter-spacing: 1px;
 }
 
 .text-spacing-1_5 {
-    letter-spacing: 1.5px;
+  letter-spacing: 1.5px;
 }
 
 .flex-wrap {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .r-50 {
-    right: 50px;
+  right: 50px;
+}
+
+.l-30 {
+  left: 30px;
+}
+
+.margin-0 {
+  margin: 0 !important;
+}
+
+.r-30 {
+  right: 30px;
+}
+
+.r-65 {
+  right: 65px;
 }
 
 .min-height-31 {
-    min-height: 31px;
+  min-height: 31px;
 }
 
 .mr8 {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 .ml--20 {
-    margin-left: -20px;
+  margin-left: -20px;
 }
 
 .mb8 {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .l-50 {
-    left: 50px;
+  left: 50px;
+}
+
+.l-65 {
+  left: 65px;
 }
 
 .r-0 {
-    right: 0;
+  right: 0;
 }
 
 .l-0 {
-    left: 0;
+  left: 0;
+}
+
+.mt--5 {
+  margin-top: -5px;
 }
 
 .r-26 {
-    right: 26px;
+  right: 26px;
 }
 
 .l-26 {
-    left: 26px;
+  left: 26px;
 }
 
 .t-0 {
-    top: 0;
+  top: 0;
 }
 
 .b-0 {
-    bottom: 0;
+  bottom: 0;
 }
 
 .flex-wrap {
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .py-14 {
-    padding-top: 14px;
-    padding-bottom: 14px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .mb6 {
-    margin-bottom: 6px;
+  margin-bottom: 6px;
 }
 
 .px-35 {
-    padding-left: 35px;
-    padding-right: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
 .font-style {
-    font-size: 17px;
-    line-height: 28px;
+  font-size: 17px;
+  line-height: 28px;
 }

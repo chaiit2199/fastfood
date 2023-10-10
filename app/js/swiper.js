@@ -80,6 +80,29 @@ var swiper = new Swiper(".sl-product-4", {
     },
 });
 
+var swiper = new Swiper(".sl-product-1", {
+    slidesPerView: 2,
+    loop: false,
+    spaceBetween: 30,
+    speed: 1000,
+    direction: 'horizontal',
+    navigation: {
+        nextEl: ".ic-slider.btn-next-product-1",
+        prevEl: ".ic-slider.btn-prev-product-1",
+    },
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        400: {
+            slidesPerView: 1,
+        },
+        991: {
+            slidesPerView: 2,
+        }
+    },
+});
+
 var swiper = new Swiper(".sl-product-2", {
     slidesPerView: 1,
     loop: true,
